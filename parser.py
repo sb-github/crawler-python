@@ -11,6 +11,7 @@ class Data_base:
         self.address = 'mongodb://127.0.0.1:27017'
         self.collection_name = collection_name
 
+    """The connection to the database"""
     def connect_db(self):
         client = pymongo.MongoClient(self.address)
         db = client['Vacancies']
@@ -19,6 +20,7 @@ class Data_base:
 
 
 class Parser_vacancy:
+    """this function get vacancies in interval 20 minutes(time create_vacancy + 20 minutes)"""
     def get_vacancy(self, status):
         array_vacancies.clear()
         data_vacancy = Data_base('vacancy').connect_db()
@@ -32,6 +34,7 @@ class Parser_vacancy:
             array_vacancies.append(vacancy)
 
     # new, in the process, processed
+    """Change status and modified_date depending on the current"""
     def change_status(self, name_database, data_vacancy):
         data_base = Data_base(name_database).connect_db()
         if data_vacancy['status'] == 'NEW':
@@ -44,6 +47,7 @@ class Parser_vacancy:
             data_base.update({'_id': data_vacancy['_id']},
                              {'$set': {'status': 'FAILED', 'modified_date': datetime.today()}})
 
+    """Cleaning raw from others symbols, signs, stop_words. And division the words"""
     def set_parsed_vacancy(self):
         try:
             raw_vacancy.clear()
