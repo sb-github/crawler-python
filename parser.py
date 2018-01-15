@@ -44,7 +44,6 @@ def set_parsed_vacancy():
         for vacancy in array_vacancies:
             words = re.sub(u'[^А-Яа-яA-Za-z\s]*', u'', vacancy['raw'])
             skills = check_stop_words(words.split())
-            print(skills)
             raw_vacancy.append(
                 {
                     'vacancy_id': vacancy['_id'],
