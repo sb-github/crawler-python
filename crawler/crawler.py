@@ -10,7 +10,6 @@ To start crawling data:
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
 
-
 '''
 
 import urllib.parse
@@ -25,7 +24,7 @@ def crawler_db():
     '''
     func that returns crawler database instance
     '''
-    client = pymongo.MongoClient('')
+    client = pymongo.MongoClient('192.168.128.2:27017')
     db = client['crawler']
     return db
     
@@ -69,7 +68,6 @@ class Crawler(object):
     crawler class, has methods that scrap web services.
     give an _id from crawler collection as an argument
     '''
-
     log = ''                # crawler`s log
     status = 'INACTIVE'     # current status of crawler instance ("INACTIVE", "IN_PROCESS", "FAILED", "PROCESSED")
     skill = None            # search skill criteria
@@ -79,12 +77,13 @@ class Crawler(object):
     vacancies_dict = {}     # dict of vacancies dicts with link, title, raw
 
 
-    def __init__(self, _id):
+    def __init__(self, _id, env='test'):
         '''
         websources - websources objects dictionary (key - ws name, value - config)
         skill - search criteria (skill)
         '''
         self._id = _id
+        self.env = env
 
 
     def write_print_log(self, string):
@@ -92,8 +91,8 @@ class Crawler(object):
         print current log notation and add it to crawler_instance.log
         '''
         print(string)
-        self.log += string 
-    
+        self.log += (string + "\n")
+
 
     def get_crawler_dict_from_db(self):
         '''
@@ -109,7 +108,7 @@ class Crawler(object):
         '''
         get search skill from db
         '''
-        skill = self.get_crawler_dict_from_db()['skill']
+        skill = self.get_crawler_dict_from_db()['searchCondition']
         self.skill = skill
 
 
@@ -176,7 +175,7 @@ class Crawler(object):
             log = "vacancies links filtered for {}".format(ws_name)
             self.write_print_log(log)
         self.vac_links_dict = filtered_links
-  
+
 
     def collect_vac_raws(self):
         '''
@@ -222,16 +221,10 @@ class Crawler(object):
         setup method, use it every time after you've initialyzed nes Crawler instance 
         '''
         self.status = "SETUP"
-        try:
-            self.read_skill_from_db()
-        except:
-            pass
 
-        try:
-            self.read_websourses_from_db()
-        except:
-            pass
-        self.status = "INACTIVE"
+        self.read_skill_from_db()
+
+        self.read_websourses_from_db()
 
 
     def run(self):
@@ -239,28 +232,15 @@ class Crawler(object):
         after setup you can run this method to collect and write vacancies to db 
         '''
         self.status = "IN_PROCESS"
-        try:
-            self.collect_pages_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_links()
-        except:
-            pass
-        
-        try:
-            self.filter_vac_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_raws()
-        except:
-            pass
-        
-        try:
-            self.write_vacancies_in_db()
-        except:
-            pass
+
+        self.collect_pages_links()
+
+        self.collect_vac_links()
+
+        self.filter_vac_links()
+
+        self.collect_vac_raws()
+
+        self.write_vacancies_in_db()
+
         self.status = "PROCESSED"
