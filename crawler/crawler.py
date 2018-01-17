@@ -109,7 +109,7 @@ class Crawler(object):
         '''
         get search skill from db
         '''
-        skill = self.get_crawler_dict_from_db()['skill']
+        skill = self.get_crawler_dict_from_db()['searchCondition']
         self.skill = skill
 
 

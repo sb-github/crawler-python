@@ -6,7 +6,6 @@ import time
 import random
 from threading import Thread
 import logging
-from .crawler import Crawler
 from .sub_procs import procs, create_subprocess, kill_process
 
 
@@ -62,7 +61,7 @@ class Controller:
         Use this method in REST_API to create and launch Crawler.
         '''
         callback = (self, self.task_finished)
-        res = create_subprocess(str(uuid), 'run.py', callback)  # returns (bool,pid)
+        res = create_subprocess(str(uuid), '../crawler/run.py', callback)  # returns (bool,pid)
 
         # response params
         obj_type = CRAWLER
@@ -87,8 +86,8 @@ class Controller:
         '''
         Callback method that writes to log file and cleans
         self.objects HashMap after process termination.
-        '''
-        self.write_log_file(self.objects[uuid]['internal_id'], uuid, CRAWLER, result)
+        '''  
+        self.write_log_file(self.objects[uuid]['internal_id'], uuid, CRAWLER, result)  # key error
         del self.objects[uuid]
 
 
@@ -104,10 +103,16 @@ class Controller:
             _id = self.objects[uuid]['internal_id']
             obj_type = self.objects[uuid]['type']
 
-            del self.objects[uuid]
-            kill_process(uuid)
-            self.write_log_file(_id, uuid, obj_type, TERMINATED)
-            return (True, {'UUID': uuid, 'status': TERMINATED})
+            # kill_process(uuid)
+            # self.write_log_file(_id, uuid, obj_type, TERMINATED)
+            # # del self.objects[uuid]
+            # return (True, {'UUID': uuid, 'status': TERMINATED})
+            if not kill_process(uuid):
+                self.write_log_file(_id, uuid, obj_type, FAILED)
+                return (False, {'UUID': uuid, 'status': FAILED})
+            else:
+                self.write_log_file(_id, uuid, obj_type, TERMINATED)
+                return (True, {'UUID': uuid, 'status': TERMINATED})
 
     
     def get_crawlers(self):
@@ -144,6 +149,10 @@ class Controller:
         Invoke this method to write in log file.
         '''
         self.logger.info('thread: {0} uuid: {1} type: {2} {3}'.format(pid, uuid, type_proc, action))
+
+
+    def start_parser(self):
+        pass
 
 
 

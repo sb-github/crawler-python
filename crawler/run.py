@@ -1,5 +1,5 @@
 import sys
-from crawler import Crawler
+from .crawler import Crawler
 
 # uid = "5a58bb84189bf2ae9b229efc"
 cr = Crawler(_id=sys.argv[1])

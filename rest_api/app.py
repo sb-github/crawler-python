@@ -1,6 +1,11 @@
 #!venv/bin/python
+import os
+import sys
 from flask import Flask, jsonify, abort
-from .controller_interface import Controller
+
+sys.path.append('..')
+
+from controller.controller_interface import Controller
 
 
 REST_API = '/api/v1.0/'

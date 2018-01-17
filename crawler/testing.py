@@ -37,5 +37,5 @@ class MockObj:
                 i += 1
 
 
-mock = MockObj(random.randrange(100), delay=3)
+mock = MockObj(random.randrange(100), delay=10)
 mock.task(sys.argv[1])

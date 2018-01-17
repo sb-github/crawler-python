@@ -7,7 +7,8 @@ def add_task(uuid, pid, proc_ref):
     procs[str(uuid)] = {'pid': pid, 'process': proc_ref}
 
 def remove_task(uuid):
-    del procs[str(uuid)]
+    task = get_task(uuid)
+    del task 
 
 def get_task(uuid):
     try:
@@ -28,6 +29,7 @@ def kill_process(uuid):
     if process_def:
         process = process_def['process']
         process.kill()
+        # remove_task(uuid)
         return True
     else:
         return False
@@ -41,8 +43,8 @@ def handle_process(uuid, obj_type, callback):
         if stderr.decode('utf-8') == '' and return_code >= 0:
             res = 'SUCCESS'
         else:
-            res = 'FAIL'
+            res = 'FAIL'  # if there any errors in stderr or terminated with force
         controller, callback_fn = callback
-        remove_task(uuid)
         callback_fn(uuid, res)
+        remove_task(uuid)
 
