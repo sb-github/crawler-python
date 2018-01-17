@@ -18,7 +18,7 @@ class Data_base:
         return posts
 
 
-class Parser_vacancy:
+class Parser_vacancy(object):
     def __init__(self):
         self.status = 'INATIVE'
 
@@ -88,11 +88,5 @@ class Parser_vacancy:
         return words
 
     def run(self):
-        try:
-            self.get_vacancy('NEW')
-        except:
-            pass
-        try:
-            self.set_parsed_vacancy()
-        except:
-            pass
+        self.get_vacancy('NEW')
+        self.set_parsed_vacancy()
