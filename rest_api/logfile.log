@@ -1,0 +1,4 @@
+2018-01-17 15:33:07,863 - controller_app - INFO - thread: 123145503715328 uuid: 1 type: CRAWLER STARTED
+2018-01-17 15:33:11,203 - controller_app - INFO - thread: 123145508970496 uuid: 2 type: CRAWLER STARTED
+2018-01-17 15:33:28,989 - controller_app - INFO - thread: 123145503715328 uuid: 1 type: CRAWLER SUCCESS
+2018-01-17 15:33:32,345 - controller_app - INFO - thread: 123145508970496 uuid: 2 type: CRAWLER SUCCESS
