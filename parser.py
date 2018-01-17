@@ -3,23 +3,25 @@ from datetime import datetime, timedelta
 import re
 
 array_vacancies = []
-raw_vacancy = []
 
 
 class Data_base:
     def __init__(self, collection_name):
-        self.address = 'mongodb://127.0.0.1:27017'
+        self.address = 'mongodb://192.168.128.231:27017'
         self.collection_name = collection_name
 
     """The connection to the database"""
     def connect_db(self):
         client = pymongo.MongoClient(self.address)
-        db = client['Vacancies']
+        db = client['сrawler']
         posts = db[self.collection_name]
         return posts
 
 
 class Parser_vacancy:
+    def __init__(self):
+        self.status = 'INATIVE'
+
     """this function get vacancies in interval 20 minutes(time create_vacancy + 20 minutes)"""
     def get_vacancy(self, status):
         array_vacancies.clear()
@@ -40,35 +42,42 @@ class Parser_vacancy:
         if data_vacancy['status'] == 'NEW':
             data_base.update({'_id': data_vacancy['_id']},
                              {'$set': {'status': 'IN_PROCESS', 'modified_date': datetime.now()}})
+            self.status = 'IN_PROCESS'
         elif data_vacancy['status'] == 'IN_PROCESS':
             data_base.update({'_id': data_vacancy['_id']},
                              {'$set': {'status': 'PROCESSED', 'modified_date': datetime.now()}})
+            self.status = 'PROCESSED'
         else:
             data_base.update({'_id': data_vacancy['_id']},
                              {'$set': {'status': 'FAILED', 'modified_date': datetime.today()}})
+            self.status = 'FAILED'
 
     """Cleaning raw from others symbols, signs, stop_words. And division the words"""
     def set_parsed_vacancy(self):
         try:
-            raw_vacancy.clear()
+            parsed_vacancy.clear()
             data_base = Data_base('parsed_vacancy').connect_db()
             self.get_vacancy('IN_PROCESS')
             for vacancy in array_vacancies:
-                words = re.sub(u'[^А-Яа-яA-Za-z\s]*', u'', vacancy['raw'])
+                s = 'Hello!@#!%!#&&!*!#$#%@*+_{ world!'
+                reg = re.compile("[^а-яёїієґьщ'a-z0-9 ]+-")
+                words = reg.sub('', vacancy['raw'])
+                for junk_char in "%$@*.!&,:;•/\—)[]+(»«":
+                    words = words.replace(junk_char, ' ')
                 skills = self.check_stop_words(words.split())
-                raw_vacancy.append(
+                parsed_vacancy.append(
                     {
                         'vacancy_id': vacancy['_id'],
                         'crawler_id': vacancy['crawler_id'],
                         'link': vacancy['link'],
-                        'raw_vacancy': skills,
+                        'raw_vacancy': list(set(skills)),
                         'result': 'NEW'
                     }
                 )
                 self.change_status('vacancy', vacancy)
-            data_base.insert_many(raw_vacancy)
+            data_base.insert_many(parsed_vacancy)
         except:
-            print('The list is empty')
+            self.status = 'FAILED'
 
     def check_stop_words(self, words):
         data_stop_word = Data_base('stop_words').connect_db()
@@ -78,7 +87,12 @@ class Parser_vacancy:
                     words.remove(word)
         return words
 
-
-parser = Parser_vacancy()
-parser.get_vacancy('NEW')
-parser.set_parsed_vacancy()
+    def run(self):
+        try:
+            self.get_vacancy('NEW')
+        except:
+            pass
+        try:
+            self.set_parsed_vacancy()
+        except:
+            pass
