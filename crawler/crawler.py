@@ -27,7 +27,7 @@ def crawler_db():
     client = pymongo.MongoClient('192.168.128.231:27017')
     db = client['crawler']
     return db
-    
+
 
 def get_bin(url, headers):
     '''
