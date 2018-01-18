@@ -24,7 +24,7 @@ def crawler_db():
     '''
     func that returns crawler database instance
     '''
-    client = pymongo.MongoClient('192.168.128.2:27017')
+    client = pymongo.MongoClient('192.168.128.231:27017')
     db = client['crawler']
     return db
     
