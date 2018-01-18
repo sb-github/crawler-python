@@ -18,7 +18,7 @@ class Data_base:
         return posts
 
 
-class Parser_vacancy(object):
+class Parser_vacancy:
     def __init__(self):
         self.status = 'INATIVE'
 
@@ -57,9 +57,8 @@ class Parser_vacancy(object):
         try:
             parsed_vacancy.clear()
             data_base = Data_base('parsed_vacancy').connect_db()
-            self.get_vacancy('FAILED')
+            self.get_vacancy('IN_PROCESS')
             for vacancy in array_vacancies:
-                s = 'Hello!@#!%!#&&!*!#$#%@*+_{ world!'
                 reg = re.compile("[^а-яёїієґьщ'a-z0-9 ]+-")
                 words = reg.sub('', vacancy['raw'])
                 for junk_char in "%$@*.!&,:;•/\—)[]+(»«":
@@ -87,5 +86,7 @@ class Parser_vacancy(object):
         return words
 
     def run(self):
+        """To collect all vacancies with status NEW"""
         self.get_vacancy('NEW')
+        """Main function for document parsed_vacancy"""
         self.set_parsed_vacancy()
