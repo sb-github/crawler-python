@@ -1,4 +1,7 @@
-from .controller_interface import Controller
+import sys
 
-c = Controller()
-c.start_crawler('uuid')
+sys.path.append('..')
+
+from rest_api.app import c
+
+c.start_parser()

@@ -1,4 +1,4 @@
-from .parser import Parser_vacancy
+from parser import Parser_vacancy
 
 
 p = Parser_vacancy()

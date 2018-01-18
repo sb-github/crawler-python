@@ -22,6 +22,7 @@ STARTED = 'STARTED'
 FINISHED = 'FINISHED'
 TERMINATED = 'TERMINATED'
 FAILED = 'FAILED'
+IN_PROCESS = 'IN PROCESS'
 
 
 
@@ -34,7 +35,7 @@ class Controller:
 
     def __init__(self, environ=None):
         self.environ = environ
-        self.objects = {}  # uuid - object_data hashmap
+        self.objects = {}  # uuid - object_data (type, status, internal_id) hashmap
         self.logger = self.init_logger()
 
 
@@ -50,7 +51,7 @@ class Controller:
         '''
         Get all content of self.objects HashMap
         '''
-        return self.objects()
+        return self.objects
 
 
     def shut_down(self):
@@ -62,13 +63,13 @@ class Controller:
         Use this method in REST_API to create and launch Crawler.
         '''
         uuid = str(uuid)
-        file = '../crawler/testing.py'
+        file = '../crawler/run.py'
         return self.start_process(uuid, CRAWLER, file)
 
 
     def start_parser(self):
-        uuid = str(uuid4) #  create internal uuid for parser
-        file = '../parser/run.py'
+        uuid = str(uuid4())[:25] #  create internal uuid for parser
+        file = '../parser/testing.py'
         return self.start_process(uuid, PARSER, file)
 
 
@@ -76,9 +77,17 @@ class Controller:
         '''
         Callback method that writes to log file and cleans
         self.objects HashMap after process termination.
-        '''  
-        self.write_log_file(self.objects[uuid]['internal_id'], uuid, CRAWLER, result)  # key error
+        '''
+        # after process creation
+        if result == IN_PROCESS:
+            self.objects[uuid]['status'] = IN_PROCESS
+            self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
+            return
+        # in case of process finish
+        if self.objects[uuid]['status'] != TERMINATED:  # if process failed
+            self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
         del self.objects[uuid]
+
 
     def start_process(self, _uuid, object_type, file_to_run):
         callback = (self, self.task_finished)
@@ -115,15 +124,12 @@ class Controller:
             _id = self.objects[uuid]['internal_id']
             obj_type = self.objects[uuid]['type']
 
-            # kill_process(uuid)
-            # self.write_log_file(_id, uuid, obj_type, TERMINATED)
-            # # del self.objects[uuid]
-            # return (True, {'UUID': uuid, 'status': TERMINATED})
             if not kill_process(uuid):
                 self.write_log_file(_id, uuid, obj_type, FAILED)
                 return (False, {'UUID': uuid, 'status': FAILED})
             else:
                 self.write_log_file(_id, uuid, obj_type, TERMINATED)
+                self.objects[uuid]['status'] = TERMINATED
                 return (True, {'UUID': uuid, 'status': TERMINATED})
 
     
@@ -131,6 +137,14 @@ class Controller:
         res = {}
         for k in self.objects:
             if self.objects[k]['type'] == CRAWLER:
+                res[k] = self.objects[k]
+    
+        return res
+
+    def get_parsers(self):
+        res = {}
+        for k in self.objects:
+            if self.objects[k]['type'] == PARSER:
                 res[k] = self.objects[k]
     
         return res

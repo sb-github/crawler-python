@@ -42,12 +42,3 @@ class CronJob:
         self.cron.remove(job)
         self.cron.write()
         # cron.remove_all(comment=comment)
-                
-
-    
-
-cron = CronJob()
-cron.add_every_minute(minutes=2, command='python3 cron_worker.py')
-
-
-    

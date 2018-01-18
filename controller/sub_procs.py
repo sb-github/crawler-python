@@ -22,7 +22,10 @@ def create_subprocess(uuid, obj_type, callback):
     t = Thread(target=handle_process, args=(uuid, obj_type, callback))
     t.start()
     tid = t.ident
-    return (True, tid)
+    if t.is_alive():
+        return (True, tid)
+    else:
+        return (False, None)
 
 def kill_process(uuid):
     process_def = get_task(uuid)
@@ -36,6 +39,11 @@ def kill_process(uuid):
     
 def handle_process(uuid, obj_type, callback):
         process = Popen(['python3', obj_type, uuid], stdout=PIPE, stderr=PIPE)
+
+        controller, callback_fn = callback
+        res = 'IN PROCESS'
+        callback_fn(uuid, res)
+        
         pid = process.pid
         add_task(uuid, pid, process)
         stdout, stderr = process.communicate()
@@ -44,7 +52,7 @@ def handle_process(uuid, obj_type, callback):
             res = 'SUCCESS'
         else:
             res = 'FAIL'  # if there any errors in stderr or terminated with force
-        controller, callback_fn = callback
+        # controller, callback_fn = callback
         callback_fn(uuid, res)
         remove_task(uuid)
 
