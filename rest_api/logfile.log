@@ -13,3 +13,7 @@
 2018-01-18 16:18:35,937 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER STARTED
 2018-01-18 16:18:35,942 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER IN PROCESS
 2018-01-18 16:18:36,008 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER SUCCESS
+2018-01-18 17:27:35,675 - controller_app - INFO - thread: 123145454186496 uuid: 1 type: CRAWLER STARTED
+2018-01-18 17:27:35,684 - controller_app - INFO - thread: 123145454186496 uuid: 1 type: CRAWLER IN PROCESS
+2018-01-18 17:27:39,024 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER STARTED
+2018-01-18 17:27:39,031 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER IN PROCESS

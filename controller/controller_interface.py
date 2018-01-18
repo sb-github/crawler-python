@@ -35,7 +35,7 @@ class Controller:
 
     def __init__(self, environ=None):
         self.environ = environ
-        self.objects = {}  # uuid - object_data (type, status, internal_id) hashmap
+        self.objects = {}  # key - uuid, value - dict with object data (type, status, internal_id)
         self.logger = self.init_logger()
 
 
@@ -69,7 +69,7 @@ class Controller:
 
     def start_parser(self):
         uuid = str(uuid4())[:25] #  create internal uuid for parser
-        file = '../parser/testing.py'
+        file = '../parser/run.py'
         return self.start_process(uuid, PARSER, file)
 
 

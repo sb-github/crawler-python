@@ -2,8 +2,6 @@
 import os
 import sys
 from flask import Flask, jsonify, abort
-import schedule
-import time
 
 sys.path.append('..')
 
@@ -15,8 +13,6 @@ REST_API = '/api/v1.0/'
 app = Flask(__name__)
 
 c = Controller()
-
-schedule.every(20).minutes.do(c.start_parser)
 
 
 @app.route(REST_API + 'crawlers/start/<crawler_id>', methods=['POST'])
@@ -57,12 +53,8 @@ def stop_parser(parser_id):
 
 @app.route(REST_API + 'parsers', methods=['GET'])
 def get_all_parsers():
-    return jsonify(c.get_parsers
+    return jsonify(c.get_parsers)
 
-
-while True:
-    schedule.run_pending()
-    time.sleep(1)
 
 if __name__ == '__main__':
     app.run(debug=True)

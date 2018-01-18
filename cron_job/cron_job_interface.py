@@ -41,4 +41,8 @@ class CronJob:
         job = self.get_job(comment)
         self.cron.remove(job)
         self.cron.write()
-        # cron.remove_all(comment=comment)
+        
+
+    def remove_all_job(self):
+        self.cron.remove_all()
+        self.cron.write()
