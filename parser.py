@@ -3,17 +3,17 @@ from datetime import datetime, timedelta
 import re
 
 array_vacancies = []
+parsed_vacancy = []
 
 
 class Data_base:
     def __init__(self, collection_name):
-        self.address = 'mongodb://192.168.128.231:27017'
         self.collection_name = collection_name
 
     """The connection to the database"""
     def connect_db(self):
-        client = pymongo.MongoClient(self.address)
-        db = client['сrawler']
+        client = pymongo.MongoClient('192.168.128.231:27017')
+        db = client['crawler']
         posts = db[self.collection_name]
         return posts
 
@@ -27,11 +27,11 @@ class Parser_vacancy(object):
         array_vacancies.clear()
         data_vacancy = Data_base('vacancy').connect_db()
         # current
-        date_time1 = datetime.today()
+        # date_time1 = datetime.today()
         # current - 20
-        date_time2 = timedelta(minutes=20)
-        for vacancy in data_vacancy.find(
-                {'status': status, 'created_date': {'$gte': date_time1 - date_time2, '$lt': date_time1}}):
+        # date_time2 = timedelta(minutes=20)
+        # 'created_date': {'$gte': date_time1 - date_time2, '$lt': date_time1}
+        for vacancy in data_vacancy.find({'status': status}):
             self.change_status('vacancy', vacancy)
             array_vacancies.append(vacancy)
 
@@ -57,7 +57,7 @@ class Parser_vacancy(object):
         try:
             parsed_vacancy.clear()
             data_base = Data_base('parsed_vacancy').connect_db()
-            self.get_vacancy('IN_PROCESS')
+            self.get_vacancy('FAILED')
             for vacancy in array_vacancies:
                 s = 'Hello!@#!%!#&&!*!#$#%@*+_{ world!'
                 reg = re.compile("[^а-яёїієґьщ'a-z0-9 ]+-")
@@ -72,8 +72,7 @@ class Parser_vacancy(object):
                         'link': vacancy['link'],
                         'raw_vacancy': list(set(skills)),
                         'result': 'NEW'
-                    }
-                )
+                    })
                 self.change_status('vacancy', vacancy)
             data_base.insert_many(parsed_vacancy)
         except:
