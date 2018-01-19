@@ -1,5 +1,4 @@
 #!venv/bin/python
-import os
 import sys
 from flask import Flask, jsonify, abort
 
