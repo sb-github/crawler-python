@@ -1,3 +1,4 @@
+
 ''' 
 Welcome to crawler module written on Python 3.6, it contains Crawler class and additional functions-helpers 
 that you must NOT modify. 
@@ -9,24 +10,26 @@ To start crawling data:
 1. Initialyze Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
-
 '''
 
+import requests, math, logging, inspect, sys
 import urllib.parse
-import requests, math
 import pymongo
+
 from lxml import html
 from bson import ObjectId
 from datetime import datetime as dt
 
+sys.path.append('..')
 
-def crawler_db():
-    '''
-    func that returns crawler database instance
-    '''
-    client = pymongo.MongoClient('192.168.128.231:27017')
-    db = client['crawler']
-    return db
+from db_config.mongodb_setup import Data_base
+
+
+status_new = "NEW"
+status_inactive = "INACTIVE"
+status_setup = "SETUP"
+status_in_process = "IN_PROCESS"
+status_processed = "PROCESSED"
 
 
 def get_bin(url, headers):
@@ -50,6 +53,20 @@ def extract_1_num(string):
     return num_int
 
 
+def get_title_n_raw_from_bin(ws, bin_html):
+    '''
+    '''
+    tree = html.fromstring(bin_html)
+    title_elem = tree.xpath(ws['title_xpath'])[0]
+    title = title_elem.text_content()
+    raw_elem = tree.xpath(ws['raw_xpath'])[0]
+    raw = ""
+    for text_piece in raw_elem.itertext():
+        raw += " "
+        raw += text_piece
+    return title, raw
+
+
 def get_vac_links(base_url, bin_html, link_xpath, link_is_abs):
     '''
     gets vacancies links from html binary using given xpath, also transforms links into
@@ -68,13 +85,12 @@ class Crawler(object):
     crawler class, has methods that scrap web services.
     give an _id from crawler collection as an argument
     '''
-    log = ''                # crawler`s log
-    status = 'INACTIVE'     # current status of crawler instance ("INACTIVE", "IN_PROCESS", "FAILED", "PROCESSED")
-    skill = None            # search skill criteria
-    websources = {}         # key - name of websource, value - dict with configurations
-    page_links_dict = {}    # key - name of websource, value - list of page (pagination pages) links with vacancies
-    vac_links_dict = {}     # key - name of websourse, value - list of vacanciy's links
-    vacancies_dict = {}     # dict of vacancies dicts with link, title, raw
+    status = status_inactive  # current status of crawler instance ("INACTIVE", "IN_PROCESS", "FAILED", "PROCESSED")
+    skill = None              # search skill criteria
+    websources = {}           # key - name of websource, value - dict with configurations
+    page_links_dict = {}      # key - name of websource, value - list of page (pagination pages) links with vacancies
+    vac_links_dict = {}       # key - name of websourse, value - list of vacanciy's links
+    vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
 
 
     def __init__(self, _id, env='test'):
@@ -84,21 +100,34 @@ class Crawler(object):
         '''
         self._id = _id
         self.env = env
+        self.logger = self.init_logger()      
+        self.db = Data_base('crawler')
 
+    def init_logger(self):
+        '''
+        Initialize log file.
+        '''
+        logger = logging.getLogger('crawler_app {}'.format(self._id))
+        logger.setLevel(logging.INFO)
 
-    def write_print_log(self, string):
-        '''
-        print current log notation and add it to crawler_instance.log
-        '''
-        print(string)
-        self.log += (string + "\n")
+        # create a file handler
+        handler = logging.FileHandler('logs/crawler {} {}.log'.format(self._id, dt.now()))
+        handler.setLevel(logging.INFO)
+
+        # create a logging format
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+
+        # add the handlers to the logger
+        logger.addHandler(handler)
+        return logger
 
 
     def get_crawler_dict_from_db(self):
         '''
         get crawler instance dictionary from database (contains search skill)
         '''
-        cursor = crawler_db().crawler.find({'_id':ObjectId(self._id)})
+        cursor = self.db.connect_db().crawler.find({'_id':ObjectId(self._id)})
         for crawler in cursor:
             crawler_dict = crawler
         return crawler_dict
@@ -108,7 +137,9 @@ class Crawler(object):
         '''
         get search skill from db
         '''
-        skill = self.get_crawler_dict_from_db()['searchCondition']
+        fname = inspect.stack()[0][3]
+        self.logger.info('SETUP - {}'.format(fname))
+        skill = self.get_crawler_dict_from_db()['search_condition']
         self.skill = skill
 
 
@@ -116,7 +147,9 @@ class Crawler(object):
         '''
         get websources configuration from db
         '''
-        cursor = crawler_db().websource.find()
+        fname = inspect.stack()[0][3]
+        self.logger.info('SETUP - {}'.format(fname))
+        cursor = self.db.connect_db().websource.find()
         for ws in cursor:
             self.websources.update({ws.pop('name'):ws})
 
@@ -125,6 +158,8 @@ class Crawler(object):
         '''
         Collects page links (pagination pages) 
         '''
+        fname = inspect.stack()[0][3]
+        self.logger.info('RUN - {}'.format(fname))
         for ws_name, ws in self.websources.items():
             search_pattern = ws['base_url'] + ws['search_pattern']
             pag_start = ws['pagination_start']
@@ -138,14 +173,16 @@ class Crawler(object):
             pages_range = range(pag_start, pages_qty + pag_start)
             ws_page_list = [search_pattern.format(skill=pars_skill, page=x) for x in pages_range]
             self.page_links_dict[ws_name] = ws_page_list
-            log = "page links collected for {}".format(ws_name)
-            self.write_print_log(log)
+            message = "RUN - {} - page links collected for {}".format(fname, ws_name)
+            self.logger.info(message)
 
 
     def collect_vac_links(self):
         '''
         Collects vacancies links from page links
         '''
+        fname = inspect.stack()[0][3]
+        self.logger.info('RUN - {}'.format(fname))
         for ws_name, page_links in self.page_links_dict.items():
             ws = self.websources[ws_name]
             link_xpath = ws['link_xpath']
@@ -158,22 +195,23 @@ class Crawler(object):
                 vac_links = get_vac_links(base_url, page_bin_html, link_xpath, link_is_abs)
                 ws_vac_links.extend(vac_links)
             self.vac_links_dict[ws_name] = ws_vac_links
-            log = "vacancies links collected for {}".format(ws_name)
-            self.write_print_log(log)
+            message = "RUN - {} - vacancies links collected for {}".format(fname, ws_name)
+            self.logger.info(message)
 
 
     def filter_vac_links(self):
         '''
         Cleans up lists in vac_links_dict ( deletes repeating values )
         '''
+        fname = inspect.stack()[0][3]
+        self.logger.info('RUN - {}'.format(fname))
         filtered_links = dict()
-
         for ws_name, links in self.vac_links_dict.items():
             link_set = set(links)
             link_list = list(link_set)
             filtered_links[ws_name] = link_list
-            log = "vacancies links filtered for {}".format(ws_name)
-            self.write_print_log(log)
+            message = "RUN - {} - vacancies links filtered for {}".format(fname, ws_name)
+            self.logger.info(message)
         self.vac_links_dict = filtered_links
 
 
@@ -181,28 +219,26 @@ class Crawler(object):
         '''
         Collects vanancies (title, raw) into vacancies list
         '''
+        fname = inspect.stack()[0][3]
+        self.logger.info('RUN - {}'.format(fname))
         for ws_name, vac_links in self.vac_links_dict.items():
             ws = self.websources[ws_name]
             headers = ws['headers']
             ws_vacancies = []
             for vac_link in vac_links:
                 bin_html = get_bin(vac_link, headers)
-                tree = html.fromstring(bin_html)
-                title_elem = tree.xpath(ws['title_xpath'])[0]
-                title = title_elem.text_content()
-                raw_elem = tree.xpath(ws['raw_xpath'])[0]
-                raw = raw_elem.text_content()
+                title, raw = get_title_n_raw_from_bin(ws, bin_html)
                 ws_vacancies.append({
                     'crawler_id':self._id,
                     'link':vac_link,
                     'title':title.lower(),
                     'raw':raw.lower(),
-                    'status':'NEW',
+                    'status':status_new,
                     'created_date': dt.now(),
                     'modified_date': dt.now(),
                 })
-                log = "vacancy '{}' (title, raw) collected from {}".format(title, ws_name)
-                self.write_print_log(log)
+                message = "RUN - {} - vacancy '{}' (title, raw) collected from {}".format(fname, title, ws_name)
+                self.logger.info(message)
             self.vacancies_dict[ws_name] = ws_vacancies
 
 
@@ -210,37 +246,52 @@ class Crawler(object):
         '''
         write vacancies to db, packes by websources
         '''
+        fname = inspect.stack()[0][3]
+        self.logger.info('RUN - {}'.format(fname))
         for ws_name, vacancies in self.vacancies_dict.items():
-            crawler_db().vacancy.insert_many(vacancies)
-            log = "vacancies for has been written to database from {}".format(ws_name)
-            self.write_print_log(log)
+            self.db.connect_db().vacancy.insert_many(vacancies)
+            message = "RUN - {} - vacancies for has been written to database from {}".format(fname, ws_name)
+            self.logger.info(message)
 
 
     def setup(self):
         '''
         setup method, use it every time after you've initialyzed nes Crawler instance 
         '''
-        self.status = "SETUP"
 
-        self.read_skill_from_db()
+        try:
+            self.logger.info('SETUP START')
+            self.status = status_setup
 
-        self.read_websourses_from_db()
+            self.read_skill_from_db()
+            self.read_websourses_from_db()
+
+            self.status = status_inactive
+            self.logger.info('SETUP FINISH')
+
+        except:
+            self.logger.exception("crawler setup error")
+            raise SystemError('crawler setup error, look crawler log for information')
 
 
     def run(self):
         '''
         after setup you can run this method to collect and write vacancies to db 
         '''
-        self.status = "IN_PROCESS"
+        try:
+            self.logger.info("RUN START")
+            self.status = status_in_process
 
-        self.collect_pages_links()
+            self.collect_pages_links()
+            self.collect_vac_links()
+            self.filter_vac_links()
+            self.collect_vac_raws()
+            self.write_vacancies_in_db()
+        
+            self.status = status_processed
+            self.logger.info("RUN FINISH")
 
-        self.collect_vac_links()
-
-        self.filter_vac_links()
-
-        self.collect_vac_raws()
-
-        self.write_vacancies_in_db()
-
-        self.status = "PROCESSED"
+        except:
+            self.status = "FAILED"
+            self.logger.exception("crawler runtime error")
+            raise SystemError('crawler runtime error, look crawler log for information')

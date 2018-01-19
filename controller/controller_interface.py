@@ -200,6 +200,7 @@ class Controller:
         db = Data_base("crawler").connect_db()
         collection = db["crawler"]
         return collection
+        # pass
 
 
     def change_status_in_db(self, uuid, status):
@@ -208,7 +209,6 @@ class Controller:
         '''
         self.db.update_one({'_id': ObjectId(uuid)}, {"$set": {"status": status}})
         # pass
-
 
 
 
