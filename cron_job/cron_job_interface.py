@@ -52,6 +52,6 @@ class CronJob:
         self.cron.write()
         
 
-    def remove_all_job(self):
+    def remove_all_jobs(self):
         self.cron.remove_all()
         self.cron.write()

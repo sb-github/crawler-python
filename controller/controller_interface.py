@@ -94,12 +94,10 @@ class Controller:
         if result == IN_PROCESS:
             self.objects[uuid]['status'] = IN_PROCESS
             self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
-            self.change_status_in_db(uuid, IN_PROCESS)
             return
         # in case of process finish
         if self.objects[uuid]['status'] != TERMINATED:  # if process failed
             self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
-            self.change_status_in_db(uuid, result)
         del self.objects[uuid]
 
 
@@ -107,7 +105,7 @@ class Controller:
         '''
         Method that creates a separate thread which runs crawler/parser.
         '''
-        callback = (self, self.task_finished)
+        callback = self.task_finished
         res = create_subprocess(_uuid, file_to_run, callback)  # returns (bool,pid)
 
         # response params
@@ -120,12 +118,11 @@ class Controller:
         else:
             status = FAILED
 
-        self.write_log_file(pid, _uuid, obj_type, status)
-        self.change_status_in_db(_uuid, STARTED)
-
         # add to hashes
         response = {'type': obj_type, 'status': status, 'internal_id': pid}
         self.objects[_uuid] = response
+
+        self.write_log_file(pid, _uuid, obj_type, status)
 
         return {_uuid: response}  
 
@@ -144,12 +141,10 @@ class Controller:
 
             if not kill_process(uuid):
                 self.write_log_file(_id, uuid, obj_type, FAILED)
-                self.change_status_in_db(uuid, FAILED)
                 return (False, {'UUID': uuid, 'status': FAILED})
             else:
                 self.write_log_file(_id, uuid, obj_type, TERMINATED)
                 self.objects[uuid]['status'] = TERMINATED
-                self.change_status_in_db(uuid, TERMINATED)
                 return (True, {'UUID': uuid, 'status': TERMINATED})
 
     
@@ -195,6 +190,7 @@ class Controller:
         Invoke this method to write in log file.
         '''
         self.logger.info('thread: {0} uuid: {1} type: {2} {3}'.format(pid, uuid, type_proc, action))
+        self.change_status_in_db(uuid, action)
 
 
     def db_setup(self):
@@ -210,9 +206,8 @@ class Controller:
         '''
         With given UUID change crawler status in MongoDB.
         '''
-        cursor = self.db.find({'_id': ObjectId(uuid)})
-        cursor = cursor[0]
-        cursor['status'] = status
+        self.db.update_one({'_id': ObjectId(uuid)}, {"$set": {"status": status}})
+        # pass
 
 
 
