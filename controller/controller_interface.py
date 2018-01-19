@@ -19,7 +19,6 @@ from db_config.mongodb_setup import Data_base
 # object constants
 CRAWLER = 'CRAWLER'
 PARSER = 'PARSER'
-GRAPH_MAKER = 'GRAPH_MAKER'
 
 # status constants
 STARTED = 'STARTED'
@@ -34,7 +33,12 @@ class Controller:
 
     '''
     Controller class that gives you an opportunity to 
-    manipulate such objects as Crawler, Parser and GraphMaker. 
+    manipulate such objects as Crawler and Parser.
+    1. Use start_crawler() to run Crawler.
+    2. Use start_parser() to run Parser.
+    3. To terminate Crawler or Parser with force, use terminate_process().
+    All details about objects creation will be written to log file 
+    (in the directory where Controller is initialized). 
     '''
 
     def __init__(self, environ=None):
@@ -73,6 +77,9 @@ class Controller:
 
 
     def start_parser(self):
+        '''
+        Use this method in REST_API to create and launch Parser.
+        '''
         uuid = str(uuid4())[:25] #  create internal uuid for parser
         file = '../parser/run.py'
         return self.start_process(uuid, PARSER, file)
@@ -81,7 +88,7 @@ class Controller:
     def task_finished(self, uuid, result):
         '''
         Callback method that writes to log file and cleans
-        self.objects HashMap after process termination.
+        self.objects dict after process termination.
         '''
         # after process creation
         if result == IN_PROCESS:
@@ -97,6 +104,9 @@ class Controller:
 
 
     def start_process(self, _uuid, object_type, file_to_run):
+        '''
+        Method that creates a separate thread which runs crawler/parser.
+        '''
         callback = (self, self.task_finished)
         res = create_subprocess(_uuid, file_to_run, callback)  # returns (bool,pid)
 
@@ -122,7 +132,7 @@ class Controller:
 
     def terminate_process(self, uuid):
         '''
-        Forcely terminate process with particular UUID.
+        Forcely terminate process with given UUID.
         '''
         try:
             self.objects[uuid]
@@ -197,6 +207,9 @@ class Controller:
 
 
     def change_status_in_db(self, uuid, status):
+        '''
+        With given UUID change crawler status in MongoDB.
+        '''
         cursor = self.db.find({'_id': ObjectId(uuid)})
         cursor = cursor[0]
         cursor['status'] = status
