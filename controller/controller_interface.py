@@ -1,18 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
+# import parser
+# import cron
 import time
 import random
 from threading import Thread
 import logging
-import sys
 from uuid import uuid4
-from bson import ObjectId
-
 from .sub_procs import procs, create_subprocess, kill_process
 
-sys.path.append('..')
-
-from db_config.mongodb_setup import Data_base
 
 
 
@@ -38,10 +34,9 @@ class Controller:
     '''
 
     def __init__(self, environ=None):
-        self.environ = environ              # set environment
-        self.objects = {}                   # key - uuid, value - dict with object data (type, status, internal_id)
-        self.logger = self.init_logger()    # initialize log file
-        self.db = self.db_setup()           # setup mongodb collection
+        self.environ = environ
+        self.objects = {}  # key - uuid, value - dict with object data (type, status, internal_id)
+        self.logger = self.init_logger()
 
 
     def set_up(self):
@@ -54,7 +49,7 @@ class Controller:
 
     def status(self): 
         '''
-        Get all running processes.
+        Get all content of self.objects HashMap
         '''
         return self.objects
 
@@ -87,12 +82,10 @@ class Controller:
         if result == IN_PROCESS:
             self.objects[uuid]['status'] = IN_PROCESS
             self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
-            self.change_status_in_db(uuid, IN_PROCESS)
             return
         # in case of process finish
         if self.objects[uuid]['status'] != TERMINATED:  # if process failed
             self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
-            self.change_status_in_db(uuid, result)
         del self.objects[uuid]
 
 
@@ -111,7 +104,6 @@ class Controller:
             status = FAILED
 
         self.write_log_file(pid, _uuid, obj_type, status)
-        self.change_status_in_db(_uuid, STARTED)
 
         # add to hashes
         response = {'type': obj_type, 'status': status, 'internal_id': pid}
@@ -134,12 +126,10 @@ class Controller:
 
             if not kill_process(uuid):
                 self.write_log_file(_id, uuid, obj_type, FAILED)
-                self.change_status_in_db(uuid, FAILED)
                 return (False, {'UUID': uuid, 'status': FAILED})
             else:
                 self.write_log_file(_id, uuid, obj_type, TERMINATED)
                 self.objects[uuid]['status'] = TERMINATED
-                self.change_status_in_db(uuid, TERMINATED)
                 return (True, {'UUID': uuid, 'status': TERMINATED})
 
     
@@ -185,23 +175,6 @@ class Controller:
         Invoke this method to write in log file.
         '''
         self.logger.info('thread: {0} uuid: {1} type: {2} {3}'.format(pid, uuid, type_proc, action))
-
-
-    def db_setup(self):
-        '''
-        Connect to MongoDB collection 'Crawler'.
-        '''
-        db = Data_base("crawler").connect_db()
-        collection = db["crawler"]
-        return collection
-
-
-    def change_status_in_db(self, uuid, status):
-        cursor = self.db.find({'_id': ObjectId(uuid)})
-        cursor = cursor[0]
-        cursor['status'] = status
-
-
 
 
     
