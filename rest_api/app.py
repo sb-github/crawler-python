@@ -1,4 +1,10 @@
 #!venv/bin/python
+'''
+This module is a Flask app that implements REST_API.
+Use URLs written in the @app.route to create HTTP requests.
+'''
+
+
 import sys
 from flask import Flask, jsonify, abort
 
