@@ -2,6 +2,11 @@
 '''
 This module is a Flask app that implements REST_API.
 Use URLs written in the @app.route to create HTTP requests.
+
+To run this file type into console:
+>$ export FLASK_APP=app.py
+>$ flask run
+ 
 '''
 
 
