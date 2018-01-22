@@ -33,12 +33,12 @@ status_processed = "PROCESSED"
 status_failed = "FAILED"
 
 
-def get_bin(url, headers):
+def get_bin(url, headers, logger):
     '''
     gets response binary for url via request
     '''
     req = requests.get(url, headers=headers, timeout=5)
-    print("request status code - {}".format(req.status_code))
+    logger.info("request status code - {} for {}".format(req.status_code, url))
     binary = req.content
     return binary
 
@@ -167,7 +167,8 @@ class Crawler(object):
             pag_start = ws['pagination_start']
             headers = ws['headers']
             pars_skill = urllib.parse.quote_plus(self.skill)
-            tree = html.fromstring(get_bin(search_pattern.format(skill=pars_skill, page=pag_start), headers))
+            url = search_pattern.format(skill=pars_skill, page=pag_start)
+            tree = html.fromstring(get_bin(url, headers, self.logger))
             jobs_qty_elem = tree.xpath(self.websources[ws_name]['jobs_qty_xpath'])[0]
             jobs_qty_text = jobs_qty_elem.text_content()
             jobs_qty = extract_1_num(jobs_qty_text)
@@ -193,7 +194,7 @@ class Crawler(object):
             headers = ws['headers']
             ws_vac_links = []
             for page_link in page_links:
-                page_bin_html = get_bin(page_link, headers)
+                page_bin_html = get_bin(page_link, headers, self.logger)
                 vac_links = get_vac_links(base_url, page_bin_html, link_xpath, link_is_abs)
                 ws_vac_links.extend(vac_links)
             self.vac_links_dict[ws_name] = ws_vac_links
@@ -228,7 +229,7 @@ class Crawler(object):
             headers = ws['headers']
             ws_vacancies = []
             for vac_link in vac_links:
-                bin_html = get_bin(vac_link, headers)
+                bin_html = get_bin(vac_link, headers, self.logger)
                 title, raw = get_title_n_raw_from_bin(ws, bin_html)
                 ws_vacancies.append({
                     'crawler_id':self._id,
@@ -249,7 +250,7 @@ class Crawler(object):
         write vacancies to db, packes by websources
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('{} - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         for ws_name, vacancies in self.vacancies_dict.items():
             self.db.connect_db().vacancy.insert_many(vacancies)
             message = "{} - {} - vacancies for has been written to database from {}".format(status_in_process, fname, ws_name)
