@@ -1,4 +1,4 @@
-#!venv/bin/python
+#!/usr/bin/python3
 '''
 This module is a Flask app that implements REST_API.
 Use URLs written in the @app.route to create HTTP requests.

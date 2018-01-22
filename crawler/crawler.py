@@ -30,14 +30,15 @@ status_inactive = "INACTIVE"
 status_setup = "SETUP"
 status_in_process = "IN_PROCESS"
 status_processed = "PROCESSED"
+status_failed = "FAILED"
 
 
-def get_bin(url, headers):
+def get_bin(url, headers, logger):
     '''
     gets response binary for url via request
     '''
     req = requests.get(url, headers=headers, timeout=5)
-    print("request status code - {}".format(req.status_code))
+    logger.info("request status code - {} for {}".format(req.status_code, url))
     binary = req.content
     return binary
 
@@ -55,6 +56,7 @@ def extract_1_num(string):
 
 def get_title_n_raw_from_bin(ws, bin_html):
     '''
+    takes websource dictionary (configuration) and returns title and raw
     '''
     tree = html.fromstring(bin_html)
     title_elem = tree.xpath(ws['title_xpath'])[0]
@@ -111,7 +113,7 @@ class Crawler(object):
         logger.setLevel(logging.INFO)
 
         # create a file handler
-        handler = logging.FileHandler('logs/crawler {} {}.log'.format(self._id, dt.now()))
+        handler = logging.FileHandler('logs_crawler/crawler {} {}.log'.format(self._id, dt.now()))
         handler.setLevel(logging.INFO)
 
         # create a logging format
@@ -138,17 +140,17 @@ class Crawler(object):
         get search skill from db
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('SETUP - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_setup, fname))
         skill = self.get_crawler_dict_from_db()['search_condition']
         self.skill = skill
 
 
     def read_websourses_from_db(self):
-        '''
+        '''status_setup
         get websources configuration from db
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('SETUP - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_setup, fname))
         cursor = self.db.connect_db().websource.find()
         for ws in cursor:
             self.websources.update({ws.pop('name'):ws})
@@ -159,13 +161,14 @@ class Crawler(object):
         Collects page links (pagination pages) 
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('RUN - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         for ws_name, ws in self.websources.items():
             search_pattern = ws['base_url'] + ws['search_pattern']
             pag_start = ws['pagination_start']
             headers = ws['headers']
             pars_skill = urllib.parse.quote_plus(self.skill)
-            tree = html.fromstring(get_bin(search_pattern.format(skill=pars_skill, page=pag_start), headers))
+            url = search_pattern.format(skill=pars_skill, page=pag_start)
+            tree = html.fromstring(get_bin(url, headers, self.logger))
             jobs_qty_elem = tree.xpath(self.websources[ws_name]['jobs_qty_xpath'])[0]
             jobs_qty_text = jobs_qty_elem.text_content()
             jobs_qty = extract_1_num(jobs_qty_text)
@@ -173,7 +176,7 @@ class Crawler(object):
             pages_range = range(pag_start, pages_qty + pag_start)
             ws_page_list = [search_pattern.format(skill=pars_skill, page=x) for x in pages_range]
             self.page_links_dict[ws_name] = ws_page_list
-            message = "RUN - {} - page links collected for {}".format(fname, ws_name)
+            message = "{} - {} - page links collected for {}".format(status_in_process, fname, ws_name)
             self.logger.info(message)
 
 
@@ -182,7 +185,7 @@ class Crawler(object):
         Collects vacancies links from page links
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('RUN - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         for ws_name, page_links in self.page_links_dict.items():
             ws = self.websources[ws_name]
             link_xpath = ws['link_xpath']
@@ -191,11 +194,11 @@ class Crawler(object):
             headers = ws['headers']
             ws_vac_links = []
             for page_link in page_links:
-                page_bin_html = get_bin(page_link, headers)
+                page_bin_html = get_bin(page_link, headers, self.logger)
                 vac_links = get_vac_links(base_url, page_bin_html, link_xpath, link_is_abs)
                 ws_vac_links.extend(vac_links)
             self.vac_links_dict[ws_name] = ws_vac_links
-            message = "RUN - {} - vacancies links collected for {}".format(fname, ws_name)
+            message = "{} - {} - vacancies links collected for {}".format(status_in_process, fname, ws_name)
             self.logger.info(message)
 
 
@@ -204,13 +207,13 @@ class Crawler(object):
         Cleans up lists in vac_links_dict ( deletes repeating values )
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('RUN - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         filtered_links = dict()
         for ws_name, links in self.vac_links_dict.items():
             link_set = set(links)
             link_list = list(link_set)
             filtered_links[ws_name] = link_list
-            message = "RUN - {} - vacancies links filtered for {}".format(fname, ws_name)
+            message = "{} - {} - vacancies links filtered for {}".format(status_in_process, fname, ws_name)
             self.logger.info(message)
         self.vac_links_dict = filtered_links
 
@@ -220,13 +223,13 @@ class Crawler(object):
         Collects vanancies (title, raw) into vacancies list
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('RUN - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         for ws_name, vac_links in self.vac_links_dict.items():
             ws = self.websources[ws_name]
             headers = ws['headers']
             ws_vacancies = []
             for vac_link in vac_links:
-                bin_html = get_bin(vac_link, headers)
+                bin_html = get_bin(vac_link, headers, self.logger)
                 title, raw = get_title_n_raw_from_bin(ws, bin_html)
                 ws_vacancies.append({
                     'crawler_id':self._id,
@@ -237,7 +240,7 @@ class Crawler(object):
                     'created_date': dt.now(),
                     'modified_date': dt.now(),
                 })
-                message = "RUN - {} - vacancy '{}' (title, raw) collected from {}".format(fname, title, ws_name)
+                message = "{} - {} - vacancy '{}' (title, raw) collected from {}".format(status_in_process, fname, title, ws_name)
                 self.logger.info(message)
             self.vacancies_dict[ws_name] = ws_vacancies
 
@@ -247,10 +250,10 @@ class Crawler(object):
         write vacancies to db, packes by websources
         '''
         fname = inspect.stack()[0][3]
-        self.logger.info('RUN - {}'.format(fname))
+        self.logger.info('{} - {}'.format(status_in_process, fname))
         for ws_name, vacancies in self.vacancies_dict.items():
             self.db.connect_db().vacancy.insert_many(vacancies)
-            message = "RUN - {} - vacancies for has been written to database from {}".format(fname, ws_name)
+            message = "{} - {} - vacancies for has been written to database from {}".format(status_in_process, fname, ws_name)
             self.logger.info(message)
 
 
@@ -260,16 +263,17 @@ class Crawler(object):
         '''
 
         try:
-            self.logger.info('SETUP START')
+            self.logger.info('{} START'.format(status_setup))
             self.status = status_setup
 
             self.read_skill_from_db()
             self.read_websourses_from_db()
 
             self.status = status_inactive
-            self.logger.info('SETUP FINISH')
+            self.logger.info('{} FINISH'.format(status_setup))
 
         except:
+            self.status = status_failed
             self.logger.exception("crawler setup error")
             raise SystemError('crawler setup error, look crawler log for information')
 
@@ -279,7 +283,7 @@ class Crawler(object):
         after setup you can run this method to collect and write vacancies to db 
         '''
         try:
-            self.logger.info("RUN START")
+            self.logger.info("{} START".format(status_in_process))
             self.status = status_in_process
 
             self.collect_pages_links()
@@ -289,9 +293,9 @@ class Crawler(object):
             self.write_vacancies_in_db()
         
             self.status = status_processed
-            self.logger.info("RUN FINISH")
+            self.logger.info("{} FINISH".format(status_in_process))
 
         except:
-            self.status = "FAILED"
+            self.status = status_failed
             self.logger.exception("crawler runtime error")
             raise SystemError('crawler runtime error, look crawler log for information')

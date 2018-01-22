@@ -72,7 +72,7 @@ class Controller:
         Use this method in REST_API to create and launch Crawler.
         '''
         uuid = str(uuid)
-        file = '../crawler/testing.py'
+        file = '../crawler/run.py'
         return self.start_process(uuid, CRAWLER, file)
 
 
@@ -93,11 +93,11 @@ class Controller:
         # after process creation
         if result == IN_PROCESS:
             self.objects[uuid]['status'] = IN_PROCESS
-            self.detect_status_change(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
+            self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
             return
         # in case of process finish
         if self.objects[uuid]['status'] != TERMINATED:  # if process failed
-            self.detect_status_change(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
+            self.write_log_file(self.objects[uuid]['internal_id'], uuid, self.objects[uuid]['type'], result)
         del self.objects[uuid]
 
 
@@ -122,7 +122,7 @@ class Controller:
         response = {'type': obj_type, 'status': status, 'internal_id': pid}
         self.objects[_uuid] = response
 
-        self.detect_status_change(pid, _uuid, obj_type, status)
+        self.write_log_file(pid, _uuid, obj_type, status)
 
         return {_uuid: response}  
 
@@ -140,10 +140,10 @@ class Controller:
             obj_type = self.objects[uuid]['type']
 
             if not kill_process(uuid):
-                self.detect_status_change(_id, uuid, obj_type, FAILED)
+                self.write_log_file(_id, uuid, obj_type, FAILED)
                 return (False, {'UUID': uuid, 'status': FAILED})
             else:
-                self.detect_status_change(_id, uuid, obj_type, TERMINATED)
+                self.write_log_file(_id, uuid, obj_type, TERMINATED)
                 self.objects[uuid]['status'] = TERMINATED
                 return (True, {'UUID': uuid, 'status': TERMINATED})
 
@@ -185,19 +185,12 @@ class Controller:
         return logger
 
 
-    def detect_status_change(self, pid, uuid, type_proc, action):
-        '''
-        Method that is used to write logs and change status in db.
-        '''
-        self.write_log_file(pid, uuid, type_proc, action)
-        self.change_status_in_db(uuid, action)
-
-
     def write_log_file(self, pid, uuid, type_proc, action):
         '''
         Invoke this method to write in log file.
         '''
         self.logger.info('thread: {0} uuid: {1} type: {2} {3}'.format(pid, uuid, type_proc, action))
+        self.change_status_in_db(uuid, action)
 
 
     def db_setup(self):
