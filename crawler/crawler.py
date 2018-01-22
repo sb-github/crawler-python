@@ -113,7 +113,7 @@ class Crawler(object):
         logger.setLevel(logging.INFO)
 
         # create a file handler
-        handler = logging.FileHandler('logs/crawler {} {}.log'.format(self._id, dt.now()))
+        handler = logging.FileHandler('crawler {} {}.log'.format(self._id, dt.now()))
         handler.setLevel(logging.INFO)
 
         # create a logging format
