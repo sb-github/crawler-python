@@ -17,3 +17,9 @@
 2018-01-18 17:27:35,684 - controller_app - INFO - thread: 123145454186496 uuid: 1 type: CRAWLER IN PROCESS
 2018-01-18 17:27:39,024 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER STARTED
 2018-01-18 17:27:39,031 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER IN PROCESS
+2018-01-23 14:42:15,161 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER STARTED
+2018-01-23 14:42:15,165 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER IN PROCESS
+2018-01-23 14:42:28,431 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER SUCCESS
+2018-01-23 14:43:13,835 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER STARTED
+2018-01-23 14:43:13,839 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER IN PROCESS
+2018-01-23 14:43:34,967 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER SUCCESS
