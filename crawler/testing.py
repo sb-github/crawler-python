@@ -1,4 +1,6 @@
 import time
+import random
+import sys
 
 
 class MockObj:
@@ -22,11 +24,10 @@ class MockObj:
         else:
             self.delay = 0
 
-    def task(self):
+    def task(self, uuid):
         time.sleep(self.delay)
-        with open('test.txt', 'a') as f:
+        with open('{}.txt'.format(uuid), 'w') as f:
             text = "Created object {}\n".format(self.id)
-<<<<<<< HEAD:crawler/testing.py
             f.write(text)
             i = 0
             while i <= self.delay:
@@ -38,6 +39,3 @@ class MockObj:
 
 mock = MockObj(random.randrange(100), delay=5)
 mock.task(sys.argv[1])
-=======
-            f.write(text)
->>>>>>> master:testing.py
