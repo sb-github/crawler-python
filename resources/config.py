@@ -7,3 +7,5 @@ PARSER_STOP = 'parsers/stop/<parser_id>'
 PARSER_GET = 'parsers'
 
 IP = '192.168.128.231:27017'
+
+# IP = '127.0.0.1:27017'

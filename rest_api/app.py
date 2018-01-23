@@ -1,4 +1,4 @@
-#!venv/bin/python
+#!/usr/bin/python3
 '''
 This module is a Flask app that implements REST_API.
 Use URLs written in the @app.route to create HTTP requests.
@@ -17,21 +17,31 @@ sys.path.append('..')
 
 from controller.controller_interface import Controller
 
+from resources import config
 
-REST_API = '/api/v1.0/'
 
 app = Flask(__name__)
 
 c = Controller()
 
 
-@app.route(REST_API + 'crawlers/start/<crawler_id>', methods=['POST'])
+REST_API = config.REST_API
+CRAWLER_START = config.CRAWLER_START
+CRAWLER_STOP = config.CRAWLER_STOP
+CRAWLER_GET = config.CRAWLER_GET
+PARSER_START = config.PARSER_START
+PARSER_STOP = config.PARSER_STOP
+PARSER_GET = config.PARSER_GET
+
+
+
+@app.route(REST_API + CRAWLER_START, methods=['POST'])
 def start_crawler(crawler_id):
     res = c.start_crawler(crawler_id)
     return jsonify(res)
 
 
-@app.route(REST_API + 'crawlers/stop/<crawler_id>', methods=['DELETE'])
+@app.route(REST_API + CRAWLER_STOP, methods=['DELETE'])
 def stop_crawler(crawler_id):
     res = c.terminate_process(crawler_id)
     if not res:
@@ -40,18 +50,18 @@ def stop_crawler(crawler_id):
         return jsonify(res)
 
 
-@app.route(REST_API + 'crawlers', methods=['GET'])
+@app.route(REST_API + CRAWLER_GET, methods=['GET'])
 def get_all_crawlers():
     return jsonify(c.get_crawlers())
 
 
-@app.route(REST_API + 'parsers/start', methods=['GET'])
+@app.route(REST_API + PARSER_START, methods=['GET'])
 def start_parser():
     res = c.start_parser()
     return jsonify(res)
 
 
-@app.route(REST_API + 'parsers/stop/<parser_id>', methods=['DELETE'])
+@app.route(REST_API + PARSER_STOP, methods=['DELETE'])
 def stop_parser(parser_id):
     ''' Use UUID sent in response when parsers/start '''
     res = c.terminate_process(parser_id)
@@ -61,10 +71,10 @@ def stop_parser(parser_id):
         return jsonify(res)
 
 
-@app.route(REST_API + 'parsers', methods=['GET'])
+@app.route(REST_API + PARSER_GET, methods=['GET'])
 def get_all_parsers():
     return jsonify(c.get_parsers)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
