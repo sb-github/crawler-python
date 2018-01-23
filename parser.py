@@ -93,5 +93,5 @@ class Parser_vacancy:
         """Main function for document parsed_vacancy"""
         self.set_parsed_vacancy()
 
-parser = Parser_vacancy()
-parser.run()
+# parser = Parser_vacancy()
+# parser.run()
