@@ -7,14 +7,9 @@ MAKE SURE that you have pymongo and lxml installed.
 
 To start crawling data:
 
-1. Initialize Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
+1. Initialyze Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
-<<<<<<< HEAD:crawler/crawler.py
-=======
-
-
->>>>>>> master:crawler.py
 '''
 
 import urllib.parse
@@ -29,7 +24,6 @@ sys.path.append('..')
 
 from db_config.mongodb_setup import Data_base
 
-<<<<<<< HEAD:crawler/crawler.py
 
 NEW = "NEW"
 INACTIVE= "INACTIVE"
@@ -37,16 +31,6 @@ SETUP = "SETUP"
 IN_PROCESS = "IN_PROCESS"
 PROCESSED = "PROCESSED"
 FAILED = "FAILED"
-=======
-def crawler_db():
-    '''
-    func that returns crawler database instance
-    '''
-    client = pymongo.MongoClient('192.168.128.231:27017')
-    db = client['crawler']
-    return db
-    
->>>>>>> master:crawler.py
 
 
 def get_bin(url, headers, logger=None):
@@ -103,44 +87,29 @@ class Crawler(object):
     crawler class, has methods that scrap web services.
     give an _id from crawler collection as an argument
     '''
-<<<<<<< HEAD:crawler/crawler.py
     status = INACTIVE         # current status of crawler instance ("INACTIVE", "IN_PROCESS", "FAILED", "PROCESSED")
     skill = None              # search skill criteria
     websources = {}           # key - name of websource, value - dict with configurations
     page_links_dict = {}      # key - name of websource, value - list of page (pagination pages) links with vacancies
     vac_links_dict = {}       # key - name of websourse, value - list of vacanciy's links
     vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
-=======
-
-    log = ''
-    status = 'INACTIVE'
-    skill = None
-    websources = {}
-    page_links_dict = {}    # key - name of websource, value - list of page (pagination pages) links with vacancies
-    vac_links_dict = {}     # key - name of websourse, value - list of vacanciy's links
-    vacancies_dict = {}     # dict of vacancies dicts with link, title, raw
->>>>>>> master:crawler.py
 
 
-    def __init__(self, _id):
+    def __init__(self, _id, env='test'):
         '''
         websources - websources objects dictionary (key - ws name, value - config)
         skill - search criteria (skill)
         '''
         self._id = _id
-<<<<<<< HEAD:crawler/crawler.py
         self.env = env
         # self.logger = self.init_logger()      
         self.db = Data_base('crawler')
-=======
->>>>>>> master:crawler.py
 
     """
     def init_logger(self):
         '''
         Initialize log file.
         '''
-<<<<<<< HEAD:crawler/crawler.py
         logger = logging.getLogger('crawler_app {}'.format(self._id))
         logger.setLevel(logging.INFO)
 
@@ -151,11 +120,6 @@ class Crawler(object):
         # create a logging format
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
-=======
-        print(string)
-        self.log += string 
-    
->>>>>>> master:crawler.py
 
         # add the handlers to the logger
         logger.addHandler(handler)
@@ -177,13 +141,9 @@ class Crawler(object):
         '''
         get search skill from db
         '''
-<<<<<<< HEAD:crawler/crawler.py
         fname = inspect.stack()[0][3]
         # self.logger.info('{} - {}'.format(SETUP, fname))
         skill = self.get_crawler_dict_from_db()['search_condition']
-=======
-        skill = self.get_crawler_dict_from_db()['skill']
->>>>>>> master:crawler.py
         self.skill = skill
 
 
@@ -258,7 +218,7 @@ class Crawler(object):
             message = "{} - {} - vacancies links filtered for {}".format(IN_PROCESS, fname, ws_name)
             # self.logger.info(message)
         self.vac_links_dict = filtered_links
-  
+
 
     def sub_collect(self, vac_tuple):
         ws_name, fname, vac_link = vac_tuple
@@ -288,7 +248,7 @@ class Crawler(object):
         for ws_name, vac_links in self.vac_links_dict.items():
             self.vacancies_dict[ws_name] = []
             vac_links = list(map(lambda x: (ws_name, fname, x), vac_links))
-            pool = Pool(10)
+            pool = Pool(15)
             pool.map(self.sub_collect, vac_links)
             pool.close()
             pool.join()
@@ -312,7 +272,6 @@ class Crawler(object):
         '''
         setup method, use it every time after you've initialyzed nes Crawler instance 
         '''
-<<<<<<< HEAD:crawler/crawler.py
         try:
             # self.logger.info('{} START'.format(SETUP))
             self.status = SETUP
@@ -327,26 +286,12 @@ class Crawler(object):
             self.status = FAILED
             # self.logger.exception("crawler setup error")
             raise SystemError('crawler setup error, look crawler log for information')
-=======
-        self.status = "SETUP"
-        try:
-            self.read_skill_from_db()
-        except:
-            pass
-
-        try:
-            self.read_websourses_from_db()
-        except:
-            pass
-        self.status = "INACTIVE"
->>>>>>> master:crawler.py
 
 
     def run(self):
         '''
         after setup you can run this method to collect and write vacancies to db
         '''
-<<<<<<< HEAD:crawler/crawler.py
         try:
             # self.logger.info("{} START".format(IN_PROCESS))
             self.status = IN_PROCESS
@@ -364,31 +309,3 @@ class Crawler(object):
             self.status = FAILED
             # self.logger.exception("crawler runtime error")
             raise SystemError('crawler runtime error, look crawler log for information')
-=======
-        self.status = "IN_PROCESS"
-        try:
-            self.collect_pages_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_links()
-        except:
-            pass
-        
-        try:
-            self.filter_vac_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_raws()
-        except:
-            pass
-        
-        try:
-            self.write_vacancies_in_db()
-        except:
-            pass
-        self.status = "PROCESSED"
->>>>>>> master:crawler.py
