@@ -1,6 +1,7 @@
 import pymongo
 from datetime import datetime, timedelta
 import re
+
 array_vacancies = []
 parsed_vacancy = []
 
@@ -12,7 +13,7 @@ class Data_base:
     """The connection to the database"""
     def connect_db(self):
         client = pymongo.MongoClient('192.168.128.231:27017')
-        db = client['Vacancies']
+        db = client['crawler']
         posts = db[self.collection_name]
         return posts
 
@@ -92,6 +93,5 @@ class Parser_vacancy:
         """Main function for document parsed_vacancy"""
         self.set_parsed_vacancy()
 
-
-# parser = Parser_vacancy()
-# parser.run()
+parser = Parser_vacancy()
+parser.run()
