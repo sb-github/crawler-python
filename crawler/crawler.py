@@ -29,7 +29,6 @@ sys.path.append('..')
 
 from db_config.mongodb_setup import Data_base
 
-<<<<<<< HEAD:crawler/crawler.py
 
 NEW = "NEW"
 INACTIVE= "INACTIVE"
@@ -37,16 +36,6 @@ SETUP = "SETUP"
 IN_PROCESS = "IN_PROCESS"
 PROCESSED = "PROCESSED"
 FAILED = "FAILED"
-=======
-def crawler_db():
-    '''
-    func that returns crawler database instance
-    '''
-    client = pymongo.MongoClient('192.168.128.231:27017')
-    db = client['crawler']
-    return db
-    
->>>>>>> master:crawler.py
 
 
 def get_bin(url, headers, logger=None):
@@ -103,23 +92,12 @@ class Crawler(object):
     crawler class, has methods that scrap web services.
     give an _id from crawler collection as an argument
     '''
-<<<<<<< HEAD:crawler/crawler.py
     status = INACTIVE         # current status of crawler instance ("INACTIVE", "IN_PROCESS", "FAILED", "PROCESSED")
     skill = None              # search skill criteria
     websources = {}           # key - name of websource, value - dict with configurations
     page_links_dict = {}      # key - name of websource, value - list of page (pagination pages) links with vacancies
     vac_links_dict = {}       # key - name of websourse, value - list of vacanciy's links
     vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
-=======
-
-    log = ''
-    status = 'INACTIVE'
-    skill = None
-    websources = {}
-    page_links_dict = {}    # key - name of websource, value - list of page (pagination pages) links with vacancies
-    vac_links_dict = {}     # key - name of websourse, value - list of vacanciy's links
-    vacancies_dict = {}     # dict of vacancies dicts with link, title, raw
->>>>>>> master:crawler.py
 
 
     def __init__(self, _id):
@@ -128,19 +106,15 @@ class Crawler(object):
         skill - search criteria (skill)
         '''
         self._id = _id
-<<<<<<< HEAD:crawler/crawler.py
         self.env = env
         # self.logger = self.init_logger()      
         self.db = Data_base('crawler')
-=======
->>>>>>> master:crawler.py
 
     """
     def init_logger(self):
         '''
         Initialize log file.
         '''
-<<<<<<< HEAD:crawler/crawler.py
         logger = logging.getLogger('crawler_app {}'.format(self._id))
         logger.setLevel(logging.INFO)
 
@@ -151,11 +125,6 @@ class Crawler(object):
         # create a logging format
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
-=======
-        print(string)
-        self.log += string 
-    
->>>>>>> master:crawler.py
 
         # add the handlers to the logger
         logger.addHandler(handler)
@@ -177,13 +146,9 @@ class Crawler(object):
         '''
         get search skill from db
         '''
-<<<<<<< HEAD:crawler/crawler.py
         fname = inspect.stack()[0][3]
         # self.logger.info('{} - {}'.format(SETUP, fname))
         skill = self.get_crawler_dict_from_db()['search_condition']
-=======
-        skill = self.get_crawler_dict_from_db()['skill']
->>>>>>> master:crawler.py
         self.skill = skill
 
 
@@ -312,7 +277,6 @@ class Crawler(object):
         '''
         setup method, use it every time after you've initialyzed nes Crawler instance 
         '''
-<<<<<<< HEAD:crawler/crawler.py
         try:
             # self.logger.info('{} START'.format(SETUP))
             self.status = SETUP
@@ -327,26 +291,12 @@ class Crawler(object):
             self.status = FAILED
             # self.logger.exception("crawler setup error")
             raise SystemError('crawler setup error, look crawler log for information')
-=======
-        self.status = "SETUP"
-        try:
-            self.read_skill_from_db()
-        except:
-            pass
-
-        try:
-            self.read_websourses_from_db()
-        except:
-            pass
-        self.status = "INACTIVE"
->>>>>>> master:crawler.py
 
 
     def run(self):
         '''
         after setup you can run this method to collect and write vacancies to db
         '''
-<<<<<<< HEAD:crawler/crawler.py
         try:
             # self.logger.info("{} START".format(IN_PROCESS))
             self.status = IN_PROCESS
@@ -364,31 +314,3 @@ class Crawler(object):
             self.status = FAILED
             # self.logger.exception("crawler runtime error")
             raise SystemError('crawler runtime error, look crawler log for information')
-=======
-        self.status = "IN_PROCESS"
-        try:
-            self.collect_pages_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_links()
-        except:
-            pass
-        
-        try:
-            self.filter_vac_links()
-        except:
-            pass
-        
-        try:
-            self.collect_vac_raws()
-        except:
-            pass
-        
-        try:
-            self.write_vacancies_in_db()
-        except:
-            pass
-        self.status = "PROCESSED"
->>>>>>> master:crawler.py
