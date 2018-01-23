@@ -123,7 +123,6 @@ class Controller:
         self.objects[_uuid] = response
 
         self.write_log_file(pid, _uuid, obj_type, status)
-
         return {_uuid: response}  
 
 
