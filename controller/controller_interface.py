@@ -85,7 +85,7 @@ class Controller:
         return self.start_process(uuid, PARSER, file)
 
 
-    def task_finished(self, uuid, result):
+    def task_callback(self, uuid, result):
         '''
         Callback method that writes to log file and cleans
         self.objects dict after process termination.
@@ -105,7 +105,7 @@ class Controller:
         '''
         Method that creates a separate thread which runs crawler/parser.
         '''
-        callback = self.task_finished
+        callback = self.task_callback
         res = create_subprocess(_uuid, file_to_run, callback)  # returns (bool,pid)
 
         # response params
@@ -123,7 +123,6 @@ class Controller:
         self.objects[_uuid] = response
 
         self.write_log_file(pid, _uuid, obj_type, status)
-
         return {_uuid: response}  
 
 
@@ -200,6 +199,7 @@ class Controller:
         db = Data_base("crawler").connect_db()
         collection = db["crawler"]
         return collection
+        # pass
 
 
     def change_status_in_db(self, uuid, status):
@@ -208,7 +208,6 @@ class Controller:
         '''
         self.db.update_one({'_id': ObjectId(uuid)}, {"$set": {"status": status}})
         # pass
-
 
 
 

@@ -71,6 +71,7 @@ def handle_process(uuid, obj_type, callback):
     pid = process.pid
     add_task(uuid, pid, process)
     stdout, stderr = process.communicate()
+    print('---- STDERR {}'.format(stderr.decode('utf-8')))
     return_code = process.returncode
     if stderr.decode('utf-8') == '' and return_code >= 0:
         res = 'SUCCESS'
