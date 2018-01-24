@@ -248,7 +248,7 @@ class Crawler(object):
         for ws_name, vac_links in self.vac_links_dict.items():
             self.vacancies_dict[ws_name] = []
             vac_links = list(map(lambda x: (ws_name, fname, x), vac_links))
-            pool = Pool(15)
+            pool = Pool(10)
             pool.map(self.sub_collect, vac_links)
             pool.close()
             pool.join()
