@@ -100,7 +100,7 @@ class Crawler(object):
     vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
 
 
-    def __init__(self, _id):
+    def __init__(self, _id, env="test"):
         '''
         websources - websources objects dictionary (key - ws name, value - config)
         skill - search criteria (skill)
