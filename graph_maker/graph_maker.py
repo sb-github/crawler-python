@@ -164,7 +164,7 @@ class Graph_maker:
     def run(self):
         self.graph_maker()
 
-maker = Graph_maker()
-maker.run()
+# maker = Graph_maker()
+# maker.run()
 
 
