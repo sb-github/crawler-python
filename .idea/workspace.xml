@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="399f8188-75b2-48a5-bc6c-259ebf2931af" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/crawler-python.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/parser.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/run.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testing.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/run.py" afterPath="$PROJECT_DIR$/parser/run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
