@@ -10,11 +10,6 @@ To start crawling data:
 1. Initialize Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
-<<<<<<< HEAD:crawler/crawler.py
-=======
-
-
->>>>>>> master:crawler.py
 '''
 
 import urllib.parse
@@ -100,7 +95,7 @@ class Crawler(object):
     vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
 
 
-    def __init__(self, _id, env="test"):
+    def __init__(self, _id, env='test'):
         '''
         websources - websources objects dictionary (key - ws name, value - config)
         skill - search criteria (skill)
@@ -117,15 +112,12 @@ class Crawler(object):
         '''
         logger = logging.getLogger('crawler_app {}'.format(self._id))
         logger.setLevel(logging.INFO)
-
         # create a file handler
         handler = logging.FileHandler('crawler {} {}.log'.format(self._id, dt.now()))
         handler.setLevel(logging.INFO)
-
         # create a logging format
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         handler.setFormatter(formatter)
-
         # add the handlers to the logger
         logger.addHandler(handler)
         return logger
@@ -223,7 +215,7 @@ class Crawler(object):
             message = "{} - {} - vacancies links filtered for {}".format(IN_PROCESS, fname, ws_name)
             # self.logger.info(message)
         self.vac_links_dict = filtered_links
-  
+
 
     def sub_collect(self, vac_tuple):
         ws_name, fname, vac_link = vac_tuple
