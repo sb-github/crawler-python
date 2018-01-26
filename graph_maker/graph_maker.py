@@ -29,20 +29,22 @@ class Graph_maker:
         dict_skill = {'crawler_id': pars_vac['crawler_id'], 'skill': arr_raw_vacancy[i],
                       'created_date': datetime.today(), 'modified_date': datetime.now()}
         con.clear()
+
         for a in range(i):
             parser_id.clear()
             parser_id.append(pars_vac['_id'])
             sub_skill = {'subskill': arr_raw_vacancy[a], 'weight': 1, 'parser_id': parser_id}
             con.append(sub_skill)
         dict_skill.update({'connects': con})
+
         for b in range(i + 1, len(arr_raw_vacancy)):
             parser_id.clear()
             parser_id.append(pars_vac['_id'])
             sub_skill = {'subskill': arr_raw_vacancy[b], 'weight': 1, 'parser_id': parser_id}
             con.append(sub_skill)
+
         dict_skill.update({'connects': con})
         data_graph_skill.insert(dict_skill)
-
 
     def insert_one_subskill(self, parser_id1, pars_vac, arr_raw_vacancy, a, con):
         parser_id1.clear()
@@ -52,6 +54,7 @@ class Graph_maker:
 
     def scan_sub_skill(self, arr_sub_skill, arr_raw_vacancy, a, parser_id, parser_id1, arr_pars_id, pars_vac,
                        arr_weight, con):
+
         if arr_sub_skill.count(arr_raw_vacancy[a]) >= 1:
             parser_id.clear()
             sub_skill = {'subskill': arr_sub_skill[arr_sub_skill.index(arr_raw_vacancy[a])]}
@@ -71,6 +74,7 @@ class Graph_maker:
             self.insert_one_subskill(parser_id1, pars_vac, arr_raw_vacancy, a, con)
 
     def graph_maker(self):
+        
         logging.config.fileConfig('logging.conf')
         logger = logging.getLogger("pythonApp")
 
