@@ -160,6 +160,7 @@ class Controller:
     
         return res
 
+
     def get_parsers(self):
         res = {}
         for k in self.objects:
