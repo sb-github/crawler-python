@@ -54,7 +54,6 @@ class Graph_maker:
 
     def scan_sub_skill(self, arr_sub_skill, arr_raw_vacancy, a, parser_id, parser_id1, arr_pars_id, pars_vac,
                        arr_weight, con):
-
         if arr_sub_skill.count(arr_raw_vacancy[a]) >= 1:
             parser_id.clear()
             sub_skill = {'subskill': arr_sub_skill[arr_sub_skill.index(arr_raw_vacancy[a])]}
@@ -74,7 +73,6 @@ class Graph_maker:
             self.insert_one_subskill(parser_id1, pars_vac, arr_raw_vacancy, a, con)
 
     def graph_maker(self):
-        
         logging.config.fileConfig('logging.conf')
         logger = logging.getLogger("pythonApp")
 
