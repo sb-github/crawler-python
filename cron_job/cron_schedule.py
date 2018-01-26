@@ -21,3 +21,4 @@ cron = CronJob()
 cron.add_every_minute(minutes=20, command='/usr/bin/python3 ../parser/run.py', comment='parser')
 cron.add_every_minute(minutes=20, command='/usr/bin/python3 ../graph_maker/run.py', comment='graph_maker')
 cron.get_cron_jobs()
+
