@@ -1,0 +1,25 @@
+2018-01-18 14:26:50,840 - controller_app - INFO - thread: 123145544593408 uuid: 5a5f2cbcda8b9b23a91d7b2d type: CRAWLER STARTED
+2018-01-18 14:26:50,860 - controller_app - INFO - thread: 123145544593408 uuid: 5a5f2cbcda8b9b23a91d7b2d type: CRAWLER IN PROCESS
+2018-01-18 14:27:01,265 - controller_app - INFO - thread: 123145549848576 uuid: 5a5f31a2da8b9b2687a7b1bb type: CRAWLER STARTED
+2018-01-18 14:27:01,272 - controller_app - INFO - thread: 123145549848576 uuid: 5a5f31a2da8b9b2687a7b1bb type: CRAWLER IN PROCESS
+2018-01-18 14:27:18,318 - controller_app - INFO - thread: 123145555103744 uuid: 5a5f74b13e7d66747f062e2f type: CRAWLER STARTED
+2018-01-18 14:27:18,326 - controller_app - INFO - thread: 123145555103744 uuid: 5a5f74b13e7d66747f062e2f type: CRAWLER IN PROCESS
+2018-01-18 14:31:51,104 - controller_app - INFO - thread: 123145555103744 uuid: 5a5f74b13e7d66747f062e2f type: CRAWLER SUCCESS
+2018-01-18 14:33:46,527 - controller_app - INFO - thread: 123145544593408 uuid: 5a5f2cbcda8b9b23a91d7b2d type: CRAWLER SUCCESS
+2018-01-18 14:35:18,471 - controller_app - INFO - thread: 123145549848576 uuid: 5a5f31a2da8b9b2687a7b1bb type: CRAWLER SUCCESS
+2018-01-18 16:17:03,362 - controller_app - INFO - thread: 123145476247552 uuid: 64cf3cb4-9e69-4790-855e-e type: PARSER STARTED
+2018-01-18 16:17:03,376 - controller_app - INFO - thread: 123145476247552 uuid: 64cf3cb4-9e69-4790-855e-e type: PARSER IN PROCESS
+2018-01-18 16:17:03,497 - controller_app - INFO - thread: 123145476247552 uuid: 64cf3cb4-9e69-4790-855e-e type: PARSER SUCCESS
+2018-01-18 16:18:35,937 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER STARTED
+2018-01-18 16:18:35,942 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER IN PROCESS
+2018-01-18 16:18:36,008 - controller_app - INFO - thread: 123145314136064 uuid: bceb056e-4fb5-4fb2-b995-7 type: PARSER SUCCESS
+2018-01-18 17:27:35,675 - controller_app - INFO - thread: 123145454186496 uuid: 1 type: CRAWLER STARTED
+2018-01-18 17:27:35,684 - controller_app - INFO - thread: 123145454186496 uuid: 1 type: CRAWLER IN PROCESS
+2018-01-18 17:27:39,024 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER STARTED
+2018-01-18 17:27:39,031 - controller_app - INFO - thread: 123145459441664 uuid: 2 type: CRAWLER IN PROCESS
+2018-01-23 14:42:15,161 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER STARTED
+2018-01-23 14:42:15,165 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER IN PROCESS
+2018-01-23 14:42:28,431 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER SUCCESS
+2018-01-23 14:43:13,835 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER STARTED
+2018-01-23 14:43:13,839 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER IN PROCESS
+2018-01-23 14:43:34,967 - controller_app - INFO - thread: 140205832976128 uuid: 5a609c5059c66de3dbcba0d9 type: CRAWLER SUCCESS
