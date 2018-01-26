@@ -43,6 +43,7 @@ class Graph_maker:
         dict_skill.update({'connects': con})
         data_graph_skill.insert(dict_skill)
 
+
     def insert_one_subskill(self, parser_id1, pars_vac, arr_raw_vacancy, a, con):
         parser_id1.clear()
         parser_id1.append(pars_vac['_id'])
@@ -111,6 +112,7 @@ class Graph_maker:
                     # take one word from raw_vacancy
                     for i in range(len(arr_raw_vacancy)):
                         # check whether the word skill
+                        logger.info("Verification word with skill")
                         if arr_graph_skill.count(arr_raw_vacancy[i]) == 1:
                             connects = arr_graph_connects[arr_graph_skill.index(arr_raw_vacancy[i])]
                             arr_sub_skill.clear()
@@ -123,11 +125,12 @@ class Graph_maker:
                                 arr_weight.append(connect['weight'])
 
                             con.clear()
-
+                            logger.info("Added word to the sub_skill...")
                             for s in arr_graph_connects[arr_graph_skill.index(arr_raw_vacancy[i])]:
                                 con.append(s)
                             """if the word is skill, then word goes through a cycle with all words, but word,
                             which is a skill """
+
                             # The scan starts sub_skills, if word == sub_skill, then start his updating
                             for a in range(i):
                                 self.scan_sub_skill(arr_sub_skill, arr_raw_vacancy, a, parser_id, parser_id1,
@@ -138,18 +141,21 @@ class Graph_maker:
                                                     arr_pars_id, pars_vac, arr_weight, con)
                             data_graph_skill.update({'crawler_id': pars_vac['crawler_id'], 'skill': arr_raw_vacancy[i]},
                                                     {'$set': {'modified_date': datetime.now(), 'connects': con}})
+                            logger.info("Update skill")
                         # if word is not skill, then creates a new skill with their sub_skills
                         else:
                             self.insert_one_skill(arr_raw_vacancy, con, parser_id, data_graph_skill, i, pars_vac)
+                            logger.info("Adding skills to the document")
                 # if no сrawler_id, then creates skills with their sub_skills
                 else:
                     for i in range(len(arr_raw_vacancy)):
                         self.insert_one_skill(arr_raw_vacancy, con, parser_id, data_graph_skill, i, pars_vac)
+                        logger.info("Adding skills to the document")
                 logger.info("Vacancy number %s in the processed", num)
 
             self.change_status('parsed_vacancy', "IN_PROCESS")
         except:
-            logger.info("FAILED! Stop the process at vacancy number %s in the processed", num)
+            logger.error("FAILED! Stop the process at vacancy number %s in the processed", num)
             self.change_status('parsed_vacancy', 'FAILED')
 
     def change_status(self, name_database, status):
@@ -166,6 +172,3 @@ class Graph_maker:
 
     def run(self):
         self.graph_maker()
-
-# maker = Graph_maker()
-# maker.run()
