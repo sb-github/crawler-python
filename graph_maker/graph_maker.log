@@ -1,0 +1,81 @@
+2018-01-28 20:04:01,320 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-01-28 20:04:01,402 - pythonApp - INFO - Connection to the database...
+2018-01-28 20:09:21,519 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-01-28 20:09:21,524 - pythonApp - INFO - Connection to the database...
+2018-01-28 20:10:55,092 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-01-28 20:10:55,097 - pythonApp - INFO - Connection to the database...
+2018-01-28 20:11:25,606 - pythonApp - ERROR - FAILED! Error when connecting to database
+Traceback (most recent call last):
+  File "C:\Users\Python\Desktop\sb-parser\crawler-python\graph_maker\graph_maker.py", line 95, in graph_maker
+    self.change_status('parsed_vacancy', "NEW")
+  File "C:\Users\Python\Desktop\sb-parser\crawler-python\graph_maker\graph_maker.py", line 171, in change_status
+    data_base.update_many({}, {'$set': {'status': 'IN_PROCESS', 'modified_date': datetime.now()}})
+  File "E:\Python\lib\site-packages\pymongo\collection.py", line 1043, in update_many
+    session=session),
+  File "E:\Python\lib\site-packages\pymongo\collection.py", line 835, in _update_retryable
+    _update, session)
+  File "E:\Python\lib\site-packages\pymongo\mongo_client.py", line 1098, in _retryable_write
+    with self._tmp_session(session) as s:
+  File "E:\Python\lib\contextlib.py", line 81, in __enter__
+    return next(self.gen)
+  File "E:\Python\lib\site-packages\pymongo\mongo_client.py", line 1404, in _tmp_session
+    s = self._ensure_session(session)
+  File "E:\Python\lib\site-packages\pymongo\mongo_client.py", line 1391, in _ensure_session
+    return self.start_session(causal_consistency=False)
+  File "E:\Python\lib\site-packages\pymongo\mongo_client.py", line 1369, in start_session
+    server_session = self._get_server_session()
+  File "E:\Python\lib\site-packages\pymongo\mongo_client.py", line 1377, in _get_server_session
+    return self._topology.get_server_session()
+  File "E:\Python\lib\site-packages\pymongo\topology.py", line 416, in get_server_session
+    None)
+  File "E:\Python\lib\site-packages\pymongo\topology.py", line 199, in _select_servers_loop
+    self._error_message(selector))
+pymongo.errors.ServerSelectionTimeoutError: 192.168.128.231:27017: timed out
+2018-01-28 20:11:50,720 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-01-28 20:11:50,725 - pythonApp - INFO - Connection to the database...
+2018-01-28 20:12:21,235 - pythonApp - ERROR - FAILED! Error when connecting to database
+2018-01-28 20:13:44,203 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-01-28 20:13:44,207 - pythonApp - INFO - Connection to the database...
+2018-01-28 20:13:44,494 - pythonApp - INFO - Vacancy number 1 of 4 in the process
+2018-01-28 20:13:44,494 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-01-28 20:13:44,501 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,502 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,503 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,504 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,504 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-01-28 20:13:44,505 - pythonApp - INFO - Vacancy number 2 of 4 in the process
+2018-01-28 20:13:44,505 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-01-28 20:13:44,507 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-01-28 20:13:44,509 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,509 - pythonApp - INFO - Added word to the sub_skill...
+2018-01-28 20:13:44,510 - pythonApp - INFO - Update skill
+2018-01-28 20:13:44,510 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,510 - pythonApp - INFO - Added word to the sub_skill...
+2018-01-28 20:13:44,512 - pythonApp - INFO - Update skill
+2018-01-28 20:13:44,512 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,513 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,514 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,514 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,515 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-01-28 20:13:44,516 - pythonApp - INFO - Vacancy number 3 of 4 in the process
+2018-01-28 20:13:44,516 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-01-28 20:13:44,518 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,519 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,520 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,522 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,523 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,523 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-01-28 20:13:44,524 - pythonApp - INFO - Vacancy number 4 of 4 in the process
+2018-01-28 20:13:44,524 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-01-28 20:13:44,525 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-01-28 20:13:44,525 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,526 - pythonApp - INFO - Added word to the sub_skill...
+2018-01-28 20:13:44,526 - pythonApp - INFO - Update skill
+2018-01-28 20:13:44,527 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,528 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,528 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,528 - pythonApp - INFO - Added word to the sub_skill...
+2018-01-28 20:13:44,529 - pythonApp - INFO - Update skill
+2018-01-28 20:13:44,529 - pythonApp - INFO - Verification word with skill
+2018-01-28 20:13:44,530 - pythonApp - INFO - Adding skills to the document
+2018-01-28 20:13:44,530 - pythonApp - INFO - Vacancy number 4 in the processed

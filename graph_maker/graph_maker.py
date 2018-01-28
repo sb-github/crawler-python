@@ -4,6 +4,7 @@ import logging.config
 
 
 class Data_base:
+
     def __init__(self, collection_name):
         self.collection_name = collection_name
 
@@ -16,8 +17,6 @@ class Data_base:
 
 
 class Graph_maker:
-    def __init__(self):
-        self.status = 'INATIVE'
 
     def delete_repeat_connect(self, con, sub_skill):
         for indx in range(len(con)):
@@ -75,11 +74,12 @@ class Graph_maker:
     def graph_maker(self):
         logging.config.fileConfig('logging.conf')
         logger = logging.getLogger("pythonApp")
-
         logger.info("Graph_maker started. Let's go)")
+
         data_vacancy = Data_base('parsed_vacancy').connect_db()
         data_graph_skill = Data_base('graph_skill').connect_db()
         logger.info("Connection to the database...")
+
         arr_raw_vacancy = []
         parser_id = []
         parser_id1 = []
@@ -91,7 +91,11 @@ class Graph_maker:
         arr_weight = []
         num = 0
         try:
-            self.change_status('parsed_vacancy', "NEW")
+            try:
+                self.change_status('parsed_vacancy', "NEW")
+            except:
+                logger.error("FAILED! Error when connecting to database")
+                raise SystemError('In graph_maker detected error, look in graph_maker.log')
             # select one vacancies from all
             for pars_vac in data_vacancy.find({'status': 'IN_PROCESS'}):
                 num += 1
@@ -157,20 +161,18 @@ class Graph_maker:
 
             self.change_status('parsed_vacancy', "IN_PROCESS")
         except:
-            logger.error("FAILED! Stop the process at vacancy number %s in the processed", num)
             self.change_status('parsed_vacancy', 'FAILED')
+            logger.exception("FAILED! Stop the process at vacancy number %s", num)
+            raise SystemError('In graph_maker detected error, look in graph_maker.log')
 
     def change_status(self, name_database, status):
         data_base = Data_base(name_database).connect_db()
         if status == 'NEW':
             data_base.update_many({}, {'$set': {'status': 'IN_PROCESS', 'modified_date': datetime.now()}})
-            self.status = 'IN_PROCESS'
         elif status == 'IN_PROCESS':
             data_base.update_many({}, {'$set': {'status': 'PROCESSED', 'modified_date': datetime.now()}})
-            self.status = 'PROCESSED'
         else:
             data_base.update_many({}, {'$set': {'status': 'FAILED', 'modified_date': datetime.today()}})
-            self.status = 'FAILED'
 
     def run(self):
         self.graph_maker()
