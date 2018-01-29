@@ -4,6 +4,7 @@ import logging.config
 
 
 class Data_base:
+
     def __init__(self, collection_name):
         self.collection_name = collection_name
 
@@ -16,8 +17,6 @@ class Data_base:
 
 
 class Graph_maker:
-    def __init__(self):
-        self.status = 'INATIVE'
 
     def delete_repeat_connect(self, con, sub_skill):
         for indx in range(len(con)):
@@ -29,17 +28,20 @@ class Graph_maker:
         dict_skill = {'crawler_id': pars_vac['crawler_id'], 'skill': arr_raw_vacancy[i],
                       'created_date': datetime.today(), 'modified_date': datetime.now()}
         con.clear()
+
         for a in range(i):
             parser_id.clear()
             parser_id.append(pars_vac['_id'])
             sub_skill = {'subskill': arr_raw_vacancy[a], 'weight': 1, 'parser_id': parser_id}
             con.append(sub_skill)
         dict_skill.update({'connects': con})
+
         for b in range(i + 1, len(arr_raw_vacancy)):
             parser_id.clear()
             parser_id.append(pars_vac['_id'])
             sub_skill = {'subskill': arr_raw_vacancy[b], 'weight': 1, 'parser_id': parser_id}
             con.append(sub_skill)
+
         dict_skill.update({'connects': con})
         data_graph_skill.insert(dict_skill)
 
@@ -72,11 +74,12 @@ class Graph_maker:
     def graph_maker(self):
         logging.config.fileConfig('logging.conf')
         logger = logging.getLogger("pythonApp")
-
         logger.info("Graph_maker started. Let's go)")
+
         data_vacancy = Data_base('parsed_vacancy').connect_db()
         data_graph_skill = Data_base('graph_skill').connect_db()
         logger.info("Connection to the database...")
+
         arr_raw_vacancy = []
         parser_id = []
         parser_id1 = []
@@ -88,7 +91,11 @@ class Graph_maker:
         arr_weight = []
         num = 0
         try:
-            self.change_status('parsed_vacancy', "NEW")
+            try:
+                self.change_status('parsed_vacancy', "NEW")
+            except:
+                logger.error("FAILED! Error when connecting to database")
+                raise SystemError('In graph_maker detected error, look in graph_maker.log')
             # select one vacancies from all
             for pars_vac in data_vacancy.find({'status': 'IN_PROCESS'}):
                 num += 1
@@ -111,6 +118,7 @@ class Graph_maker:
                     # take one word from raw_vacancy
                     for i in range(len(arr_raw_vacancy)):
                         # check whether the word skill
+                        logger.info("Verification word with skill")
                         if arr_graph_skill.count(arr_raw_vacancy[i]) == 1:
                             connects = arr_graph_connects[arr_graph_skill.index(arr_raw_vacancy[i])]
                             arr_sub_skill.clear()
@@ -123,11 +131,12 @@ class Graph_maker:
                                 arr_weight.append(connect['weight'])
 
                             con.clear()
-
+                            logger.info("Added word to the sub_skill...")
                             for s in arr_graph_connects[arr_graph_skill.index(arr_raw_vacancy[i])]:
                                 con.append(s)
                             """if the word is skill, then word goes through a cycle with all words, but word,
                             which is a skill """
+
                             # The scan starts sub_skills, if word == sub_skill, then start his updating
                             for a in range(i):
                                 self.scan_sub_skill(arr_sub_skill, arr_raw_vacancy, a, parser_id, parser_id1,
@@ -138,34 +147,32 @@ class Graph_maker:
                                                     arr_pars_id, pars_vac, arr_weight, con)
                             data_graph_skill.update({'crawler_id': pars_vac['crawler_id'], 'skill': arr_raw_vacancy[i]},
                                                     {'$set': {'modified_date': datetime.now(), 'connects': con}})
+                            logger.info("Update skill")
                         # if word is not skill, then creates a new skill with their sub_skills
                         else:
                             self.insert_one_skill(arr_raw_vacancy, con, parser_id, data_graph_skill, i, pars_vac)
+                            logger.info("Adding skills to the document")
                 # if no сrawler_id, then creates skills with their sub_skills
                 else:
                     for i in range(len(arr_raw_vacancy)):
                         self.insert_one_skill(arr_raw_vacancy, con, parser_id, data_graph_skill, i, pars_vac)
+                        logger.info("Adding skills to the document")
                 logger.info("Vacancy number %s in the processed", num)
 
             self.change_status('parsed_vacancy', "IN_PROCESS")
         except:
-            logger.info("FAILED! Stop the process at vacancy number %s in the processed", num)
             self.change_status('parsed_vacancy', 'FAILED')
+            logger.exception("FAILED! Stop the process at vacancy number %s", num)
+            raise SystemError('In graph_maker detected error, look in graph_maker.log')
 
     def change_status(self, name_database, status):
         data_base = Data_base(name_database).connect_db()
         if status == 'NEW':
             data_base.update_many({}, {'$set': {'status': 'IN_PROCESS', 'modified_date': datetime.now()}})
-            self.status = 'IN_PROCESS'
         elif status == 'IN_PROCESS':
             data_base.update_many({}, {'$set': {'status': 'PROCESSED', 'modified_date': datetime.now()}})
-            self.status = 'PROCESSED'
         else:
             data_base.update_many({}, {'$set': {'status': 'FAILED', 'modified_date': datetime.today()}})
-            self.status = 'FAILED'
 
     def run(self):
         self.graph_maker()
-
-# maker = Graph_maker()
-# maker.run()
