@@ -7,7 +7,7 @@ MAKE SURE that you have pymongo and lxml installed.
 
 To start crawling data:
 
-1. Initialize Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
+1. Initialyze Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
 '''
@@ -117,7 +117,11 @@ class Crawler(object):
     vacancies_dict = {}       # dict of vacancies dicts with link, title, raw
 
 
+<<<<<<< HEAD:crawler/crawler.py
     def __init__(self, _id, env="test"):
+=======
+    def __init__(self, _id, env='test'):
+>>>>>>> master:crawler/crawler.py
         '''
         websources - websources objects dictionary (key - ws name, value - config)
         skill - search criteria (skill)
@@ -132,7 +136,11 @@ class Crawler(object):
         '''
         Initialize log file.
         '''
+<<<<<<< HEAD:crawler/crawler.py
         logger = logging.getLogger('crawler_app %s' % self._id)
+=======
+        logger = logging.getLogger('crawler_app {}'.format(self._id))
+>>>>>>> master:crawler/crawler.py
         logger.setLevel(logging.INFO)
 
         # create a file handler
@@ -248,8 +256,15 @@ class Crawler(object):
             link_set = set(links)
             link_list = list(link_set)
             filtered_links[ws_name] = link_list
+<<<<<<< HEAD:crawler/crawler.py
             self.logger.info("%s - %s - vacancies links filtered for %s", IN_PROCESS, fname, ws_name)
         self.f_vac_links_dict = filtered_links
+=======
+            message = "{} - {} - vacancies links filtered for {}".format(IN_PROCESS, fname, ws_name)
+            # self.logger.info(message)
+        self.vac_links_dict = filtered_links
+
+>>>>>>> master:crawler/crawler.py
 
 
     def collect_vacancy(self, vac_tuple):
