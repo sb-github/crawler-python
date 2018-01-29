@@ -1,0 +1,15 @@
+2018-01-29 16:29:25,586 - crawler_app 5a68a28525bf133c4d056e21 - INFO - SETUP START
+2018-01-29 16:29:25,636 - crawler_app 5a68a28525bf133c4d056e21 - INFO - SETUP - read_skill_from_db
+2018-01-29 16:29:25,666 - crawler_app 5a68a28525bf133c4d056e21 - INFO - SETUP - read_websourses_from_db
+2018-01-29 16:29:25,685 - crawler_app 5a68a28525bf133c4d056e21 - INFO - SETUP FINISH
+2018-01-29 16:29:25,686 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS START
+2018-01-29 16:29:25,686 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS - collect_pages_links
+2018-01-29 16:29:25,924 - crawler_app 5a68a28525bf133c4d056e21 - INFO - request status code - 200 for https://www.work.ua/jobs-zzzzzzzzzzzzzzzzzz/?page=1
+2018-01-29 16:29:25,926 - crawler_app 5a68a28525bf133c4d056e21 - INFO - request status code - 200 for https://www.work.ua/jobs-zzzzzzzzzzzzzzzzzz/?page=1
+2018-01-29 16:29:26,785 - crawler_app 5a68a28525bf133c4d056e21 - INFO - request status code - 200 for https://hh.ua/search/vacancy?text=zzzzzzzzzzzzzzzzzz&area=5&page=0
+2018-01-29 16:29:26,786 - crawler_app 5a68a28525bf133c4d056e21 - INFO - request status code - 200 for https://hh.ua/search/vacancy?text=zzzzzzzzzzzzzzzzzz&area=5&page=0
+2018-01-29 16:29:26,790 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS - process_ws_pool
+2018-01-29 16:29:26,937 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS - filter_vac_links
+2018-01-29 16:29:26,938 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS - process_ws_pool
+2018-01-29 16:29:27,041 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS - write_vacancies_in_db
+2018-01-29 16:29:27,041 - crawler_app 5a68a28525bf133c4d056e21 - INFO - IN_PROCESS FINISH
