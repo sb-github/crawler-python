@@ -19,8 +19,4 @@ EXPOSE 5000
 CMD python3 cron_job/cron_schedule.py; cd rest_api; python3 app.py
 
 # sudo docker build --no-cache -t crawler-python:latest .
-<<<<<<< HEAD
 # sudo docker run -it --rm -e LANG=C.UTF-8 -p 5000:5000 crawler-python
-=======
-# sudo docker run -it --rm -e LANG=C.UTF-8 -p 5000:5000 crawler-python
->>>>>>> develop
