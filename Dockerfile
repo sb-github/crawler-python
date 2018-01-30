@@ -1,6 +1,5 @@
 FROM python:3.6-alpine
 
-USER root
 ENV PYTHONIOENCODING=utf-8
 USER root
 
