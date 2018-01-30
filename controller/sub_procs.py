@@ -6,6 +6,12 @@ This module helps to manage thread and subprocess creation.
 from subprocess import Popen, PIPE
 from threading import Thread
 
+
+IN_PROCESS = 'IN_PROCESS'
+FINISHED = 'PROCESSED'
+FAILED = 'FAILED'
+
+
 procs = {}  # key - uuid, value - dict with process_id and process reference
 
 def add_task(uuid, pid, proc_ref):
@@ -65,18 +71,18 @@ def handle_process(uuid, obj_type, callback):
     process = Popen(['python3', obj_type, uuid], stdout=PIPE, stderr=PIPE)
 
     callback_fn = callback
-    res = 'IN PROCESS'
+    res = IN_PROCESS
     callback_fn(uuid, res)
         
     pid = process.pid
     add_task(uuid, pid, process)
     stdout, stderr = process.communicate()
-    # print('---- STDERR {}'.format(stderr.decode('utf-8')))
+    # print('---- STDERR ---- \n{}'.format(stderr.decode('utf-8')))
     return_code = process.returncode
     if stderr.decode('utf-8') == '' and return_code >= 0:
-        res = 'SUCCESS'
+        res = FINISHED
     else:
-        res = 'FAIL'  # if there any errors in stderr or terminated with force
+        res = FAILED  # if there any errors in stderr or terminated with force
     callback_fn(uuid, res)
     remove_task(uuid)
 

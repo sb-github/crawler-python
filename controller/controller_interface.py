@@ -21,11 +21,11 @@ CRAWLER = 'CRAWLER'
 PARSER = 'PARSER'
 
 # status constants
-STARTED = 'STARTED'
-FINISHED = 'FINISHED'
-TERMINATED = 'TERMINATED'
+STARTED = 'NEW'
+FINISHED = 'PROCESSED'
+TERMINATED = 'STOPPED'
 FAILED = 'FAILED'
-IN_PROCESS = 'IN PROCESS'
+IN_PROCESS = 'IN_PROCESS'
 
 
 
@@ -60,7 +60,11 @@ class Controller:
         '''
         Get all running processes.
         '''
-        return self.objects
+        #return self.objects
+        res = []
+        for uuid in self.objects:
+            res.append(self.json_response(uuid))
+        return res
 
 
     def shut_down(self):
@@ -119,11 +123,12 @@ class Controller:
             status = FAILED
 
         # add to hashes
-        response = {'type': obj_type, 'status': status, 'internal_id': pid}
-        self.objects[_uuid] = response
+        process_info = {'type': obj_type, 'status': status, 'internal_id': pid}
+        self.objects[_uuid] = process_info
 
         self.write_log_file(pid, _uuid, obj_type, status)
-        return {_uuid: response}  
+        # return {_uuid: response}
+        return self.json_response(_uuid)
 
 
     def terminate_process(self, uuid):
@@ -154,6 +159,7 @@ class Controller:
                 res[k] = self.objects[k]
     
         return res
+
 
     def get_parsers(self):
         res = {}
@@ -209,6 +215,21 @@ class Controller:
         self.db.update_one({'_id': ObjectId(uuid)}, {"$set": {"status": status}})
         # pass
 
+
+    def json_response(self, uuid):
+        '''
+        Response for requests in Flask.
+        '''
+        try:
+            self.objects[uuid]
+        except KeyError:
+            print('Object doesnt exist')
+        else:
+            # return {'crawler_id': uuid, 'internal_id': self.objects[uuid]['internal_id'],
+            #         'status': self.objects[uuid]['status']}
+            response = self.objects[uuid]
+            response['crawler_id'] = uuid
+            return response
 
 
     

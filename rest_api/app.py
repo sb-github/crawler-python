@@ -44,15 +44,15 @@ def start_crawler(crawler_id):
 @app.route(REST_API + CRAWLER_STOP, methods=['DELETE'])
 def stop_crawler(crawler_id):
     res = c.terminate_process(crawler_id)
-    if not res:
+    if not res[0]:
         abort(404)
     else:
-        return jsonify(res)
+        return jsonify(res[1])
 
 
 @app.route(REST_API + CRAWLER_GET, methods=['GET'])
 def get_all_crawlers():
-    return jsonify(c.get_crawlers())
+    return jsonify(c.status())
 
 
 @app.route(REST_API + PARSER_START, methods=['GET'])
