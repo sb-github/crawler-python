@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from parser import Parser_vacancy
+from parser_vacancy import Parser_vacancy
 import datetime
 
 
