@@ -16,7 +16,6 @@ from cron_job_interface import CronJob
 
 
 cron = CronJob()
-cron.add_every_minute(minutes=1, command='/usr/local/bin/python3 /crawler_app/parser/ex.py', comment='parser')
 cron.add_every_minute(minutes=20, command='/usr/local/bin/python3 /crawler_app/parser/run.py', comment='parser')
 cron.add_every_minute(minutes=20, command='/usr/local/bin/python3 /crawler_app/graph_maker/run.py', comment='graph_maker')
 cron.get_cron_jobs()
