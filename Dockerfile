@@ -15,7 +15,7 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-CMD /usr/sbin/crond -f; python3 cron_job/cron_schedule.py; cd rest_api; python3 app.py 
+CMD /usr/sbin/crond -f && python3 cron_job/cron_schedule.py && cd rest_api && python3 app.py 
 
 # sudo docker build --no-cache -t crawler-python:latest .
 # sudo docker run -it --rm -e LANG=C.UTF-8 -p 5000:5000 crawler-python
