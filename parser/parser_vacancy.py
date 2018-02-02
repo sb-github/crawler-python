@@ -21,7 +21,7 @@ class Data_base:
 
 class Parser_vacancy:
     def __init__(self):
-        logging.config.fileConfig('logging.conf')
+        logging.config.fileConfig('crawler_app/parser/logging.conf')
         self.logger = logging.getLogger('parserApp')
 
     """this function get vacancies in interval 20 minutes(time create_vacancy + 20 minutes)"""

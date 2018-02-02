@@ -84,7 +84,7 @@ class Graph_maker:
         self.arr_graph_connects.append(graph_skill['connects'])
 
     def graph_maker(self):
-        logging.config.fileConfig('logging.conf')
+        logging.config.fileConfig('crawler_app/parser/logging.conf')
         logger = logging.getLogger("pythonApp")
         logger.info("Graph_maker started. Let's go)")
 
