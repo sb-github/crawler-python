@@ -1,0 +1,56 @@
+2018-02-08 15:14:53,559 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:14:53,560 - parserApp - INFO - Connection to the database...
+2018-02-08 15:14:53,575 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:14:53,575 - parserApp - INFO - Connection to the database...
+2018-02-08 15:14:53,584 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:14:53,700 - parserApp - INFO - Vacancy number 3 of 3 in the processed
+2018-02-08 15:14:53,748 - parserApp - INFO - Vacancy number 3 of 3 in the processed
+2018-02-08 15:14:53,763 - parserApp - INFO - Vacancy number 3 of 3 in the processed
+2018-02-08 15:14:53,769 - parserApp - INFO - Data from the document 'vacancy' was processed successfully, and were listed in table parsed_vacancy
+2018-02-08 15:17:40,581 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:17:40,582 - parserApp - INFO - Connection to the database...
+2018-02-08 15:17:40,596 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:17:40,596 - parserApp - INFO - Connection to the database...
+2018-02-08 15:17:40,605 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:17:40,772 - parserApp - INFO - Vacancy number 4 of 6 in the processed
+2018-02-08 15:17:40,815 - parserApp - INFO - Vacancy number 5 of 6 in the processed
+2018-02-08 15:17:40,874 - parserApp - INFO - Vacancy number 6 of 6 in the processed
+2018-02-08 15:17:40,905 - parserApp - INFO - Vacancy number 6 of 6 in the processed
+2018-02-08 15:17:40,932 - parserApp - INFO - Vacancy number 6 of 6 in the processed
+2018-02-08 15:17:40,974 - parserApp - INFO - Vacancy number 6 of 6 in the processed
+2018-02-08 15:17:40,980 - parserApp - INFO - Data from the document 'vacancy' was processed successfully, and were listed in table parsed_vacancy
+2018-02-08 15:18:15,223 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:18:15,223 - parserApp - INFO - Connection to the database...
+2018-02-08 15:18:15,236 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:18:15,237 - parserApp - INFO - Connection to the database...
+2018-02-08 15:18:15,245 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:18:15,278 - parserApp - ERROR - FAILED! Error when data processing
+2018-02-08 15:21:01,662 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:21:01,662 - parserApp - INFO - Connection to the database...
+2018-02-08 15:21:01,676 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:21:01,676 - parserApp - INFO - Connection to the database...
+2018-02-08 15:21:01,684 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:21:01,786 - parserApp - INFO - Vacancy number 1 of 6 in the processed
+2018-02-08 15:21:01,831 - parserApp - INFO - Vacancy number 2 of 6 in the processed
+2018-02-08 15:21:01,921 - parserApp - INFO - Vacancy number 3 of 6 in the processed
+2018-02-08 15:21:01,984 - parserApp - INFO - Vacancy number 4 of 6 in the processed
+2018-02-08 15:21:02,101 - parserApp - INFO - Vacancy number 5 of 6 in the processed
+2018-02-08 15:21:02,151 - parserApp - INFO - Vacancy number 6 of 6 in the processed
+2018-02-08 15:21:02,156 - parserApp - INFO - Data from the document 'vacancy' was processed successfully, and were listed in table parsed_vacancy
+2018-02-08 15:23:06,294 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:23:06,294 - parserApp - INFO - Connection to the database...
+2018-02-08 15:23:06,308 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:23:06,308 - parserApp - INFO - Connection to the database...
+2018-02-08 15:23:06,318 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:23:06,446 - parserApp - INFO - Vacancy number 4 of 5 in the processed
+2018-02-08 15:23:06,492 - parserApp - INFO - Vacancy number 5 of 5 in the processed
+2018-02-08 15:23:06,525 - parserApp - INFO - Vacancy number 5 of 5 in the processed
+2018-02-08 15:23:06,555 - parserApp - INFO - Vacancy number 5 of 5 in the processed
+2018-02-08 15:23:06,749 - parserApp - INFO - Vacancy number 5 of 5 in the processed
+2018-02-08 15:23:06,755 - parserApp - INFO - Data from the document 'vacancy' was processed successfully, and were listed in table parsed_vacancy
+2018-02-08 15:35:16,721 - parserApp - INFO - Graph_maker started. Let's go)
+2018-02-08 15:35:16,722 - parserApp - INFO - Connection to the database...
+2018-02-08 15:35:16,732 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:35:16,732 - parserApp - INFO - Connection to the database...
+2018-02-08 15:35:16,737 - parserApp - INFO - Data from documents 'vacancy' were take successfully
+2018-02-08 15:35:16,740 - parserApp - ERROR - FAILED! Error when data processing
