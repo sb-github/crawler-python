@@ -229,6 +229,10 @@ class Controller:
             #         'status': self.objects[uuid]['status']}
             response = self.objects[uuid]
             response['crawler_id'] = uuid
+            # get search_condition from db
+            cursor = self.db.find({"_id":ObjectId(uuid)})
+            search_condition = cursor[0]['search_condition']
+            response['search_condition'] = search_condition
             return response
 
 

@@ -15,7 +15,7 @@ class Graph_maker:
     def __init__(self):
         self.arr_graph_skill = []
         self.arr_graph_connects = []
-        self.data_base = Data_base('Vacancies').connect_db()
+        self.data_base = Data_base('crawler').connect_db()
         self.log_file_path = path.join(path.dirname(path.abspath(__file__)), 'logging.conf')
         logging.config.fileConfig(self.log_file_path)
         self.logger = logging.getLogger('pythonApp')

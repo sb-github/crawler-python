@@ -7,7 +7,7 @@ MAKE SURE that you have pymongo and lxml installed.
 
 To start crawling data:
 
-1. Initialize Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
+1. Initialyze Crawler class instance and pass _id attribute (e.g. crawler_instanse = Crawler(_id="5a58bb84189bf2ae9b229efc")). 
 2. Run crawler_instanse.setup() method to setup crawler.
 3. Run crawler_instanse.run() method to start grabbing data and after this writing it to db.
 '''
@@ -70,9 +70,10 @@ def extract_1_num(string):
     '''
     lis = string.rsplit()
     num_list = list(filter(lambda x: x.isdigit(), lis))
-    num = num_list[0]
-    num_int = int(num)
-    return num_int
+    if num_list:
+        num = num_list[0]
+        num_int = int(num)
+        return num_int
 
 
 def get_title_n_raw_from_bin(ws, bin_html):
@@ -193,14 +194,17 @@ class Crawler(object):
             pars_skill = urllib.parse.quote_plus(self.skill)
             url = search_pattern.format(skill=pars_skill, page=pag_start)
             tree = html.fromstring(get_bin(url, headers, self.logger))
-            jobs_qty_elem = tree.xpath(self.websources[ws_name]['jobs_qty_xpath'])[0]
-            jobs_qty_text = jobs_qty_elem.text_content()
-            jobs_qty = extract_1_num(jobs_qty_text)
-            pages_qty = math.ceil(jobs_qty/ws['pagination'])
-            pages_range = range(pag_start, pages_qty + pag_start)
-            ws_page_list = [search_pattern.format(skill=pars_skill, page=x) for x in pages_range]
-            self.page_links_dict[ws_name] = ws_page_list
-            self.logger.info("%s - %s - page links collected for %s", IN_PROCESS, fname, ws_name)
+            jobs_qty_elem_list = tree.xpath(self.websources[ws_name]['jobs_qty_xpath'])
+            if jobs_qty_elem_list:
+                jobs_qty_elem = jobs_qty_elem_list[0]
+                jobs_qty_text = jobs_qty_elem.text_content()
+                jobs_qty = extract_1_num(jobs_qty_text)
+                if jobs_qty:
+                    pages_qty = math.ceil(jobs_qty/ws['pagination'])
+                    pages_range = range(pag_start, pages_qty + pag_start)
+                    ws_page_list = [search_pattern.format(skill=pars_skill, page=x) for x in pages_range]
+                    self.page_links_dict[ws_name] = ws_page_list
+                    self.logger.info("%s - %s - page links collected for %s", IN_PROCESS, fname, ws_name)
 
 
     def get_link(self, item):
