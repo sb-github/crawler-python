@@ -23,9 +23,6 @@ class Graph_maker:
         self.data_graph_skill = self.data_base['graph_skill']
         self.count_vacancy = self.data_vacancy.find({'status': 'NEW'}).count()
         self.current_num = 0
-        self.arr_sub_skill = []
-        self.arr_pars_id = []
-        self.arr_weight = []
 
     def delete_repeat_connect(self, con, sub_skill):
         for indx in range(len(con)):
