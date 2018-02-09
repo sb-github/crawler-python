@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2018-02-09 12:22:35,062 - pythonApp - INFO - Graph_maker started. Let's go)
 2018-02-09 12:22:35,063 - pythonApp - INFO - Connection to the database...
 2018-02-09 12:22:35,067 - pythonApp - INFO - Vacancy number 1 of 6 in the process
@@ -75,3 +76,1357 @@
 2018-02-09 12:22:35,147 - pythonApp - INFO - Added word to the sub_skill...
 2018-02-09 12:22:35,148 - pythonApp - INFO - Update skill
 2018-02-09 12:22:35,148 - pythonApp - INFO - Vacancy number 6 in the processed
+=======
+2018-02-08 16:31:28,497 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 16:31:28,507 - pythonApp - INFO - Connection to the database...
+2018-02-08 16:31:28,509 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 16:31:28,509 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 16:31:28,510 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 16:31:28,510 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 16:31:28,510 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:31:28,510 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:31:28,510 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:31:28,510 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:31:28,559 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,560 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,561 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 16:31:28,562 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,563 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,569 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,569 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 16:31:28,580 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 16:31:28,583 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,584 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,585 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,586 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 16:31:28,587 - pythonApp - INFO - Update skill
+2018-02-08 16:31:28,588 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 16:31:28,588 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,588 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,589 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:31:28,589 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 16:31:28,591 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,591 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 16:31:28,591 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,594 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,594 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,596 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,596 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 16:31:28,598 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,598 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 16:31:28,602 - pythonApp - INFO - Update skill
+2018-02-08 16:31:28,602 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,603 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,604 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,605 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,605 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,606 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,606 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 16:31:28,608 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,609 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,609 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,610 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,610 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,611 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,611 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:31:28,612 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:31:28,612 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 16:40:01,356 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 16:40:01,366 - pythonApp - INFO - Connection to the database...
+2018-02-08 16:40:01,369 - pythonApp - INFO - Vacancy number 1 of 4 in the process
+2018-02-08 16:40:01,369 - pythonApp - INFO - Vacancy number 2 of 4 in the process
+2018-02-08 16:40:01,369 - pythonApp - INFO - Vacancy number 3 of 4 in the process
+2018-02-08 16:40:01,369 - pythonApp - INFO - Vacancy number 4 of 4 in the process
+2018-02-08 16:40:01,369 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:40:01,369 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:40:01,370 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:40:01,370 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 16:40:01,374 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,375 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 16:40:01,377 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,377 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 16:40:01,378 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,379 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,380 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,381 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,382 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 16:40:01,383 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,385 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,385 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 16:40:01,393 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,394 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,395 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,395 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,395 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,395 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,396 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,396 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,396 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,397 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,397 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,397 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,398 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,398 - pythonApp - INFO - Verification word with skill
+2018-02-08 16:40:01,399 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,399 - pythonApp - INFO - Adding skills to the document
+2018-02-08 16:40:01,399 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 16:40:01,399 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 18:27:15,818 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 18:27:15,876 - pythonApp - INFO - Connection to the database...
+2018-02-08 18:27:15,876 - pythonApp - INFO - Vacancy number 1 of 4 in the process
+2018-02-08 18:27:15,876 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:27:15,894 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,896 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,896 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,897 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,897 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 18:27:15,898 - pythonApp - INFO - Vacancy number 2 of 4 in the process
+2018-02-08 18:27:15,898 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:27:15,899 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:27:15,908 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:15,908 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:27:15,946 - pythonApp - INFO - Update skill
+2018-02-08 18:27:15,946 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:15,946 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:27:15,948 - pythonApp - INFO - Update skill
+2018-02-08 18:27:15,948 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:15,949 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,949 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:15,950 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,950 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 18:27:15,950 - pythonApp - INFO - Vacancy number 3 of 4 in the process
+2018-02-08 18:27:15,950 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:27:15,970 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,971 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,972 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,973 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,973 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:15,973 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 18:27:15,974 - pythonApp - INFO - Vacancy number 4 of 4 in the process
+2018-02-08 18:27:15,974 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:27:15,974 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:27:15,981 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:15,981 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:27:16,018 - pythonApp - INFO - Update skill
+2018-02-08 18:27:16,019 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:16,019 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:16,020 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:16,020 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:27:16,021 - pythonApp - INFO - Update skill
+2018-02-08 18:27:16,021 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:27:16,022 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:27:16,022 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 18:29:35,565 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 18:29:35,574 - pythonApp - INFO - Connection to the database...
+2018-02-08 18:29:35,574 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 18:29:35,574 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:29:35,577 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,579 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,579 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,580 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,580 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 18:29:35,581 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 18:29:35,581 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:29:35,581 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:29:35,588 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,588 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,603 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,603 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,603 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,610 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,610 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,611 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,611 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,612 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,612 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 18:29:35,612 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 18:29:35,612 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:29:35,614 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,614 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,615 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,616 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,616 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,616 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 18:29:35,617 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 18:29:35,617 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:29:35,617 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:29:35,626 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,626 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,628 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,628 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,629 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,629 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,629 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,630 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,630 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,631 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:29:35,631 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 18:29:35,631 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 18:29:35,631 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:29:35,632 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:29:35,641 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,641 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,646 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,646 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,646 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,648 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,648 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,648 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,650 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,650 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:29:35,650 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:29:35,650 - pythonApp - INFO - Update skill
+2018-02-08 18:29:35,650 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 18:51:05,039 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 18:51:05,043 - pythonApp - INFO - Connection to the database...
+2018-02-08 18:52:29,827 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 18:52:29,827 - pythonApp - INFO - Connection to the database...
+2018-02-08 18:52:29,869 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 18:52:29,869 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,869 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,869 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,869 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,871 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,871 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,872 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,873 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,873 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 18:52:29,873 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 18:52:29,873 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,873 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,873 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,873 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,874 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:52:29,884 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,885 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,886 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,886 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,887 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,887 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,888 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,888 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,888 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,889 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,889 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 18:52:29,889 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 18:52:29,890 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,890 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,890 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,890 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,890 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,892 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,893 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,894 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,895 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,896 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,896 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 18:52:29,896 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 18:52:29,896 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,896 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,896 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,896 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,897 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:52:29,903 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,903 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,904 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,905 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,932 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,932 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,932 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,933 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,933 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,934 - pythonApp - INFO - Adding skills to the document
+2018-02-08 18:52:29,934 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 18:52:29,934 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 18:52:29,934 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,934 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,934 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,935 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 18:52:29,935 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 18:52:29,941 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,941 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,942 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,942 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,943 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,943 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,943 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,943 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,944 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,945 - pythonApp - INFO - Verification word with skill
+2018-02-08 18:52:29,945 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 18:52:29,945 - pythonApp - INFO - Update skill
+2018-02-08 18:52:29,946 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 19:00:24,731 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 19:00:24,731 - pythonApp - INFO - Connection to the database...
+2018-02-08 19:00:24,737 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 19:00:24,737 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,738 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,738 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,738 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,740 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,741 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,742 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,743 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,743 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 19:00:24,744 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 19:00:24,744 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,744 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,744 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,744 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,745 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 19:00:24,746 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,746 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,748 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,748 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,748 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,749 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,749 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,750 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,751 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,753 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,753 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 19:00:24,754 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 19:00:24,754 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,754 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,754 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,754 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,754 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,770 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,771 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,771 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,772 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,772 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,773 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 19:00:24,773 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 19:00:24,773 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,773 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,773 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,773 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,774 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 19:00:24,775 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,775 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,775 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,776 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,776 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,776 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,776 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,777 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,777 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,778 - pythonApp - INFO - Adding skills to the document
+2018-02-08 19:00:24,778 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 19:00:24,778 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 19:00:24,778 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,778 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,779 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,779 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 19:00:24,779 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 19:00:24,780 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,780 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,781 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,781 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,781 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,782 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,782 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,782 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,783 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,783 - pythonApp - INFO - Verification word with skill
+2018-02-08 19:00:24,783 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 19:00:24,784 - pythonApp - INFO - Update skill
+2018-02-08 19:00:24,784 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:15:26,722 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:15:26,735 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:15:26,806 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:15:26,806 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,806 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,806 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,807 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,809 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,809 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,810 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,812 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,812 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:15:26,812 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:15:26,812 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,812 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,812 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,812 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,813 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:15:26,846 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,846 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,848 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,848 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,848 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,849 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,849 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,850 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,850 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,867 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,867 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:15:26,867 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:15:26,867 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,867 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,867 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,867 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,868 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,869 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,870 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,871 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,871 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,872 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,872 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:15:26,872 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:15:26,872 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,872 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,872 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,872 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,873 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:15:26,878 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,878 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,880 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,880 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,881 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,881 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,881 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,897 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,897 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,898 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:15:26,898 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:15:26,898 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:15:26,898 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,898 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,898 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,898 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:15:26,899 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:15:26,904 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,905 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,905 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,906 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,906 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,908 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,908 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,908 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,909 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,909 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:15:26,909 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:15:26,910 - pythonApp - INFO - Update skill
+2018-02-08 22:15:26,911 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:20:25,320 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:20:25,320 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:20:25,325 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:20:25,325 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,325 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,325 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,325 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,335 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,336 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,337 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,338 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,338 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:20:25,338 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:20:25,338 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,338 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,338 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,338 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,339 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:20:25,346 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,347 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,347 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,348 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,348 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,349 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,349 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,360 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,361 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:20:25,361 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:20:25,361 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,361 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,361 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,361 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,362 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,363 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,364 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,365 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,365 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,367 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,367 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:20:25,367 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:20:25,368 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,368 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,368 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,368 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,369 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:20:25,375 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,375 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:20:25,376 - pythonApp - INFO - Update skill
+2018-02-08 22:20:25,376 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,377 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,377 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,377 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,378 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,378 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,378 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:20:25,378 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:20:25,379 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,379 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,379 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,379 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:20:25,379 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:20:25,385 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,385 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:20:25,386 - pythonApp - INFO - Update skill
+2018-02-08 22:20:25,387 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,387 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,387 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,387 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:20:25,388 - pythonApp - INFO - Update skill
+2018-02-08 22:20:25,388 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:20:25,389 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:20:25,389 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:23:53,274 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:23:53,274 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:23:53,279 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:23:53,279 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,279 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,279 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,280 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,283 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,283 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,284 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,285 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,285 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:23:53,285 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:23:53,285 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,285 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,285 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,286 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,286 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:23:53,294 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,294 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,296 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,296 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,296 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,297 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,297 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,298 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,298 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,299 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,299 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:23:53,299 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:23:53,299 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,299 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,299 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,300 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,300 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,301 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,302 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,327 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,328 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,329 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,329 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:23:53,329 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:23:53,329 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,329 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,329 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,330 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,330 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:23:53,336 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,336 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,337 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,337 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,337 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,337 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,338 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,338 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,338 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,339 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:23:53,339 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:23:53,339 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:23:53,339 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,340 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,340 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,340 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:23:53,340 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:23:53,346 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,346 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,347 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,347 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,348 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,349 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,349 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,349 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,350 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,350 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:23:53,350 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:23:53,351 - pythonApp - INFO - Update skill
+2018-02-08 22:23:53,351 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:30:18,275 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:30:18,275 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:30:18,280 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:30:18,280 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:30:18,282 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,283 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,284 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,286 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,286 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:30:18,286 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:30:18,286 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:30:18,287 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:30:18,295 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,295 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,296 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,297 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,297 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,298 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,298 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,298 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,298 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,299 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,299 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:30:18,299 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:30:18,299 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:30:18,301 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,302 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,320 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,321 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,322 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,322 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:30:18,322 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:30:18,322 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:30:18,323 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:30:18,329 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,329 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,330 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,330 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,331 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,331 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,331 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,332 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,332 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,333 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:30:18,333 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:30:18,333 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:30:18,333 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:30:18,334 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:30:18,340 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,340 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,341 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,341 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,341 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,342 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,342 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,342 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,343 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,343 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:30:18,344 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:30:18,344 - pythonApp - INFO - Update skill
+2018-02-08 22:30:18,344 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:32:38,432 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:32:38,432 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:32:38,437 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:32:38,437 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:32:38,440 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,441 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,442 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,442 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,442 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:32:38,443 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:32:38,443 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:32:38,443 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:32:38,450 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,450 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,451 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,452 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,452 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,464 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,464 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,465 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,465 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,471 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,472 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:32:38,472 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:32:38,472 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:32:38,473 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,474 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,475 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,475 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,476 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,476 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:32:38,476 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:32:38,476 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:32:38,477 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:32:38,481 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,481 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,482 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,482 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,483 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,483 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,483 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,484 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,484 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,485 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:32:38,485 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:32:38,485 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:32:38,485 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:32:38,486 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:32:38,491 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,491 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,554 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,554 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,554 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,582 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,582 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,582 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,597 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,597 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:32:38,598 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:32:38,599 - pythonApp - INFO - Update skill
+2018-02-08 22:32:38,599 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:35:02,836 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:35:02,837 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:35:02,843 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:35:02,843 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:35:02,845 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:35:02,845 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:35:02,846 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:35:02,847 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:35:02,847 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:35:02,847 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:35:02,847 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:35:02,853 - pythonApp - ERROR - FAILED! Stop the process at vacancy number 2
+Traceback (most recent call last):
+  File "C:\Users\Python\Desktop\SoftBistro\crawler-python\graph_maker\graph_maker.py", line 118, in get_graph_maker
+    print('skill: ', data_graph_sk['skill'])
+  File "E:\Python\lib\site-packages\pymongo\cursor.py", line 615, in __getitem__
+    "instances" % index)
+TypeError: index 'skill' cannot be applied to Cursor instances
+2018-02-08 22:37:04,000 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:37:04,001 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:37:04,006 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:37:04,006 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:37:04,007 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,008 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,008 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,009 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,009 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:37:04,010 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:37:04,010 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:37:04,010 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:37:04,019 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,019 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,020 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,020 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,020 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,021 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,021 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,021 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,022 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,051 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,051 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:37:04,051 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:37:04,051 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:37:04,053 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,054 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,055 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,055 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,056 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,056 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:37:04,056 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:37:04,056 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:37:04,057 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:37:04,062 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,063 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,064 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,064 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,065 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,065 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,065 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,066 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,066 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,067 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:37:04,067 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:37:04,067 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:37:04,067 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:37:04,068 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:37:04,073 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,073 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,074 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,074 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,075 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,127 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,127 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,128 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,129 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,129 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:37:04,129 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:37:04,130 - pythonApp - INFO - Update skill
+2018-02-08 22:37:04,131 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:45:23,624 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:45:23,624 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:45:23,630 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:45:23,630 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:45:23,651 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:45:23,652 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:45:23,653 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:45:23,653 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:45:23,653 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:45:23,654 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:45:23,654 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:45:23,655 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:45:23,663 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:45:23,663 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:45:23,664 - pythonApp - INFO - Update skill
+2018-02-08 22:45:23,665 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:45:23,665 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:45:23,668 - pythonApp - ERROR - FAILED! Stop the process at vacancy number 2
+Traceback (most recent call last):
+  File "C:\Users\Python\Desktop\SoftBistro\crawler-python\graph_maker\graph_maker.py", line 149, in get_graph_maker
+    arr_pars_id, arr_vacancies[index], arr_weight)
+TypeError: scan_sub_skill() missing 1 required positional argument: 'con'
+2018-02-08 22:47:10,996 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:47:10,996 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:47:11,002 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:47:11,003 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:47:11,042 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,043 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,044 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,045 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,045 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:47:11,045 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:47:11,045 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:47:11,046 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:47:11,054 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,055 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,056 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,056 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,057 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,058 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,058 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,059 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,059 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,060 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,060 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:47:11,060 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:47:11,060 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:47:11,062 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,062 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,075 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,076 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,077 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,077 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:47:11,078 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:47:11,078 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:47:11,079 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:47:11,084 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,084 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,085 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,085 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,086 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,086 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,086 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,087 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,087 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,088 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:47:11,088 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:47:11,088 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:47:11,088 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:47:11,089 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:47:11,095 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,096 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,097 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,097 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,098 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,099 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,099 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,099 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,100 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,100 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:47:11,100 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:47:11,101 - pythonApp - INFO - Update skill
+2018-02-08 22:47:11,102 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:49:42,608 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:49:42,608 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:49:42,613 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:49:42,614 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:49:42,616 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,618 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,619 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,619 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,620 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:49:42,620 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:49:42,620 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:49:42,621 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:49:42,629 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,629 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,630 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,630 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,630 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,631 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,631 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,632 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,632 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,633 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,633 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:49:42,633 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:49:42,633 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:49:42,634 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,635 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,635 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,636 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,637 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,637 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:49:42,637 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:49:42,637 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:49:42,638 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:49:42,643 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,643 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,644 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,644 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,645 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,645 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,645 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,669 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,669 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,670 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:49:42,670 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:49:42,670 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:49:42,670 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:49:42,671 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:49:42,676 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,676 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,677 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,677 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,677 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,678 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,678 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,678 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,679 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,679 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:49:42,679 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:49:42,680 - pythonApp - INFO - Update skill
+2018-02-08 22:49:42,680 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 22:58:01,152 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 22:58:01,152 - pythonApp - INFO - Connection to the database...
+2018-02-08 22:58:01,159 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 22:58:01,159 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:58:01,161 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,161 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,163 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,164 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,164 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 22:58:01,164 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 22:58:01,164 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:58:01,165 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:58:01,172 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,172 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,173 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,174 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,174 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,175 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,175 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,176 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,176 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,177 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,177 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 22:58:01,177 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 22:58:01,177 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:58:01,180 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,181 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,182 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,183 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,183 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,184 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 22:58:01,184 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 22:58:01,184 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:58:01,184 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:58:01,189 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,189 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,191 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,191 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,191 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,192 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,192 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,192 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,193 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,193 - pythonApp - INFO - Adding skills to the document
+2018-02-08 22:58:01,193 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 22:58:01,193 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 22:58:01,194 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 22:58:01,194 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 22:58:01,199 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,199 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,200 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,200 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,200 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,201 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,201 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,201 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,202 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,202 - pythonApp - INFO - Verification word with skill
+2018-02-08 22:58:01,202 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 22:58:01,203 - pythonApp - INFO - Update skill
+2018-02-08 22:58:01,203 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:09:13,093 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:09:13,093 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:09:13,100 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 23:09:13,100 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:09:13,102 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,103 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,104 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,105 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,105 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 23:09:13,106 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 23:09:13,106 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:09:13,107 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:09:13,115 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,115 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,116 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,116 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,116 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,117 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,117 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,118 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,118 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,138 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,138 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 23:09:13,138 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 23:09:13,138 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:09:13,140 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,141 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,141 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,142 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,143 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,143 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 23:09:13,143 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 23:09:13,143 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:09:13,144 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:09:13,150 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,150 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,151 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,151 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,152 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,152 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,152 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,153 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,153 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,154 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:09:13,154 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 23:09:13,154 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 23:09:13,154 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:09:13,155 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:09:13,160 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,160 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,161 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,161 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,162 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,163 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,163 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,163 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,164 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,164 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:09:13,165 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:09:13,166 - pythonApp - INFO - Update skill
+2018-02-08 23:09:13,166 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:20:48,366 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:20:48,366 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:20:48,371 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 23:20:48,371 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:20:48,375 - pythonApp - ERROR - FAILED! Stop the process at vacancy number 1
+Traceback (most recent call last):
+  File "C:\Users\Python\Desktop\SoftBistro\crawler-python\graph_maker\graph_maker.py", line 168, in get_graph_maker
+    self.insert_one_skill(arr_raw_vacancy, con, self.data_graph_skill, i, arr_vacancies[index])
+  File "C:\Users\Python\Desktop\SoftBistro\crawler-python\graph_maker\graph_maker.py", line 48, in insert_one_skill
+    parser_id.clear()
+UnboundLocalError: local variable 'parser_id' referenced before assignment
+2018-02-08 23:22:36,760 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:22:36,760 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:22:36,766 - pythonApp - INFO - Vacancy number 1 of 5 in the process
+2018-02-08 23:22:36,766 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:22:36,767 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,769 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,770 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,771 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,772 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 23:22:36,772 - pythonApp - INFO - Vacancy number 2 of 5 in the process
+2018-02-08 23:22:36,772 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:22:36,773 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:22:36,781 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,781 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,783 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,783 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,783 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,784 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,785 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,786 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,786 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,804 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,804 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 23:22:36,804 - pythonApp - INFO - Vacancy number 3 of 5 in the process
+2018-02-08 23:22:36,804 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:22:36,807 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,808 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,809 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,810 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,811 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,811 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 23:22:36,811 - pythonApp - INFO - Vacancy number 4 of 5 in the process
+2018-02-08 23:22:36,811 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:22:36,812 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:22:36,817 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,818 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,829 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,830 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,830 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,830 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,831 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,832 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,832 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,832 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:22:36,833 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 23:22:36,833 - pythonApp - INFO - Vacancy number 5 of 5 in the process
+2018-02-08 23:22:36,833 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:22:36,833 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:22:36,839 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,839 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,843 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,843 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,843 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,852 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,852 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,852 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,853 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,854 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:22:36,854 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:22:36,855 - pythonApp - INFO - Update skill
+2018-02-08 23:22:36,855 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:32:12,855 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:32:12,855 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:32:12,860 - pythonApp - INFO - Vacancy number 1 of 6 in the process
+2018-02-08 23:32:12,861 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,862 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,862 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,863 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,864 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,864 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 23:32:12,864 - pythonApp - INFO - Vacancy number 2 of 6 in the process
+2018-02-08 23:32:12,864 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,865 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:32:12,873 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,873 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,874 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,875 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,875 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,876 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,876 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,877 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,877 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,894 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,894 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 23:32:12,894 - pythonApp - INFO - Vacancy number 3 of 6 in the process
+2018-02-08 23:32:12,894 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,896 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,896 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,897 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,898 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,898 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,898 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 23:32:12,899 - pythonApp - INFO - Vacancy number 4 of 6 in the process
+2018-02-08 23:32:12,899 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,899 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:32:12,904 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,904 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,905 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,905 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,906 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,906 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,906 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,907 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,907 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,908 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:32:12,908 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 23:32:12,908 - pythonApp - INFO - Vacancy number 5 of 6 in the process
+2018-02-08 23:32:12,908 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,909 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:32:12,913 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,914 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,915 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,915 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,915 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,916 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,916 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,916 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,917 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,917 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,917 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,919 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,919 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:32:12,919 - pythonApp - INFO - Vacancy number 6 of 6 in the process
+2018-02-08 23:32:12,919 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:32:12,920 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:32:12,924 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,925 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,926 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,926 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,926 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,927 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,927 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,927 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,930 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,931 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:32:12,931 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:32:12,931 - pythonApp - INFO - Update skill
+2018-02-08 23:32:12,932 - pythonApp - INFO - Vacancy number 6 in the processed
+2018-02-08 23:39:52,185 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:39:52,185 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:39:52,191 - pythonApp - INFO - Vacancy number 1 of 6 in the process
+2018-02-08 23:39:52,191 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,193 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,194 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,195 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,196 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,196 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 23:39:52,197 - pythonApp - INFO - Vacancy number 2 of 6 in the process
+2018-02-08 23:39:52,197 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,198 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:39:52,205 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,205 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,206 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,206 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,207 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,208 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,209 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,209 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,209 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,230 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,231 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 23:39:52,231 - pythonApp - INFO - Vacancy number 3 of 6 in the process
+2018-02-08 23:39:52,231 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,234 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,235 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,235 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,236 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,237 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,237 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 23:39:52,237 - pythonApp - INFO - Vacancy number 4 of 6 in the process
+2018-02-08 23:39:52,237 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,238 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:39:52,244 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,244 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,247 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,247 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,248 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,248 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,248 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,249 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,250 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,250 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:39:52,251 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 23:39:52,251 - pythonApp - INFO - Vacancy number 5 of 6 in the process
+2018-02-08 23:39:52,251 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,251 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:39:52,256 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,257 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,276 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,276 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,276 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,277 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,278 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,278 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,279 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,279 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,279 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,281 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,281 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:39:52,281 - pythonApp - INFO - Vacancy number 6 of 6 in the process
+2018-02-08 23:39:52,281 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:39:52,282 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:39:52,293 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,293 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,294 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,295 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,295 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,296 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,296 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,296 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,298 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,298 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:39:52,299 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:39:52,300 - pythonApp - INFO - Update skill
+2018-02-08 23:39:52,300 - pythonApp - INFO - Vacancy number 6 in the processed
+2018-02-08 23:48:12,501 - pythonApp - INFO - Graph_maker started. Let's go)
+2018-02-08 23:48:12,502 - pythonApp - INFO - Connection to the database...
+2018-02-08 23:48:12,508 - pythonApp - INFO - Vacancy number 1 of 6 in the process
+2018-02-08 23:48:12,508 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,511 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,512 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,513 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,514 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,514 - pythonApp - INFO - Vacancy number 1 in the processed
+2018-02-08 23:48:12,514 - pythonApp - INFO - Vacancy number 2 of 6 in the process
+2018-02-08 23:48:12,514 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,515 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:48:12,524 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,524 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,525 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,525 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,526 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,527 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,527 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,528 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,528 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,606 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,606 - pythonApp - INFO - Vacancy number 2 in the processed
+2018-02-08 23:48:12,607 - pythonApp - INFO - Vacancy number 3 of 6 in the process
+2018-02-08 23:48:12,607 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,608 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,609 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,610 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,611 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,611 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,612 - pythonApp - INFO - Vacancy number 3 in the processed
+2018-02-08 23:48:12,612 - pythonApp - INFO - Vacancy number 4 of 6 in the process
+2018-02-08 23:48:12,612 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,612 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:48:12,617 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,618 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,620 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,620 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,621 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,621 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,621 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,622 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,622 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,623 - pythonApp - INFO - Adding skills to the document
+2018-02-08 23:48:12,623 - pythonApp - INFO - Vacancy number 4 in the processed
+2018-02-08 23:48:12,623 - pythonApp - INFO - Vacancy number 5 of 6 in the process
+2018-02-08 23:48:12,623 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,624 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:48:12,629 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,629 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,631 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,631 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,631 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,632 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,633 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,633 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,644 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,644 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,644 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,645 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,645 - pythonApp - INFO - Vacancy number 5 in the processed
+2018-02-08 23:48:12,646 - pythonApp - INFO - Vacancy number 6 of 6 in the process
+2018-02-08 23:48:12,646 - pythonApp - INFO - Verification vacancy on 'ñrawler_id'
+2018-02-08 23:48:12,646 - pythonApp - INFO - Read data skill from collection graph_skill
+2018-02-08 23:48:12,651 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,651 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,652 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,653 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,653 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,654 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,654 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,654 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,656 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,656 - pythonApp - INFO - Verification word with skill
+2018-02-08 23:48:12,657 - pythonApp - INFO - Added word to the sub_skill...
+2018-02-08 23:48:12,658 - pythonApp - INFO - Update skill
+2018-02-08 23:48:12,658 - pythonApp - INFO - Vacancy number 6 in the processed
+>>>>>>> develop
